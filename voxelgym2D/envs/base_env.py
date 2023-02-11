@@ -431,7 +431,8 @@ class BaseEnv(gym.Env):
         )
 
     # set the agent's location at the center of the map
-    def soft_reset(self):
+    def soft_reset(self) -> None:
+        """Moves the agent to the center of the map and resets the target"""
         self._new_world_center = np.array([self.world_size[1] / 2, self.world_size[0] / 2], dtype=np.int32)
         self.slice_grid_map()
         self._agent_location = np.array([self.view_size, self.view_size], dtype=np.int32)
