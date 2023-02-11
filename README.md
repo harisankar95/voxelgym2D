@@ -1,6 +1,36 @@
 # voxelgym2D
 A gym environment for voxel/grid based reinforcement learning for path planning.
 
+<div id="solution-table">
+    <table>
+	    <tr>
+    	    <td style="padding:10px">
+        	    <img src="resources/solution_1.gif" width="420"/>
+      	    </td>
+            <td style="padding:10px">
+            	<img src="resources/solution_2.gif" width="420"/>
+            </td>
+        </tr>
+    </table>
+</div>
+
+## Results with [SB3](https://github.com/DLR-RM/stable-baselines3) (v1.6.2) : PPO :smile:
+Here are the results of training a PPO agent on the `onestep-v0` using the example [here](examples/train_ppo.py). Below you will find the episode reward and episode length over steps during training. As the agent learns, the episode reward increases and the episode length reduces are the agent learns to identify the goal and reach it in the shortest possible path.
+
+<div id="solution-table">
+    <table>
+	    <tr>
+    	    <td style="padding:10px">
+        	    <img src="resources/ep_reward.png" width="420"/>
+      	    </td>
+            <td style="padding:10px">
+            	<img src="resources/ep_length.png" width="420"/>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
 ## Installation
 ```bash
 git clone https://github.com/harisankar95/voxelgym2D.git ~/path/to/repo
@@ -52,7 +82,7 @@ This project is licensed under the terms of the [MIT license](LICENSE).
 - [ ] Add documentation
 
 ## Known issues
-- [ ] Currently only supports gym==0.21.0 :sad:,hence setuptools==65.5.0 is required to install gym.
+- [ ] Currently only supports gym==0.21.0 :neutral_face,hence setuptools==65.5.0 is required to install gym.
 
 ## Contributing
 Contributions are welcome! Please open an issue or a pull request.

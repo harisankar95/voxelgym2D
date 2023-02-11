@@ -2,6 +2,9 @@
 examples/logs/
 examples/tb_logs/
 
+# IDE settings
+.vscode/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

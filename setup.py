@@ -8,6 +8,7 @@ setup(
     author_email="harisankar995@gmail.com",
     keywords="reinforcement-learning machine-learning gym openai python data-science",
     license="MIT",
+    url="https://github.com/harisankar95/voxelgym2D.git",
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Education",
