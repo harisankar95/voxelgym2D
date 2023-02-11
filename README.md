@@ -72,6 +72,9 @@ The examples can be found [here](examples).
 ## License
 This project is licensed under the terms of the [MIT license](LICENSE).
 
+## Documentation
+The documentation can be found [here](https://harisankar95.github.io/voxelgym2D/).
+
 ## Changelog
 ### 0.1.0
 - Initial release of voxelgym 2D environments tested with stable_baselines 3 (v1.6.2) and python 3.8
