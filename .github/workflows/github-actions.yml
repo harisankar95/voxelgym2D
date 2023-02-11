@@ -6,65 +6,50 @@ on:
   pull_request:
     branches: [ main ]
 
-env:
-  PYTHON_VERSION: python:3.8
-
 jobs:
 
-  default:
+  Build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.8"]
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Python ${{ env.PYTHON_VERSION }}
+      - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ env.PYTHON_VERSION }}
+          python-version: ${{ matrix.python-version }}
 
       - name: Install dependencies
         run: |
-          apt-get update
-          apt-get install ffmpeg libsm6 libxext6 -y
-          pip install virtualenv
-          virtualenv venv
-          source venv/bin/activate
           pip install setuptools==65.5.0
           pip install -e .[dev]
   
-  linting:
-    needs: default
-    runs-on: ubuntu-latest
-    steps:
       - name: Pylint
         run: pylint --fail-under=8 voxelgym2D
 
-      - name: mypy
+      - name: Mypy
         run: mypy voxelgym2D
 
-      - name: isort
+      - name: Isort
         run: isort --check-only --diff voxelgym2D tests examples
 
-      - name: black
+      - name: Black
         run: black --check --diff voxelgym2D tests examples -l 120
 
-  testing:
-    needs: default
-    runs-on: ubuntu-latest
-    steps:
-      - name: pytest
+      - name: Pytest
         run: |
           coverage run -m pytest tests/
           coverage report
 
-  deploy:
-    needs: default
-    runs-on: ubuntu-latest
-    steps:
       - name: Build docs
         run: sphinx-build -b html docs/ ./public
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to gh pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
