@@ -5,10 +5,10 @@ A gym environment for voxel/grid based reinforcement learning for path planning.
     <table>
 	    <tr>
     	    <td style="padding:10px">
-        	    <img src="resources/solution_1.gif" width="400"/>
+        	    <img src="resources/solution_1.gif" width="390"/>
       	    </td>
             <td style="padding:10px">
-            	<img src="resources/solution_2.gif" width="400"/>
+            	<img src="resources/solution_2.gif" width="390"/>
             </td>
         </tr>
     </table>
@@ -21,10 +21,10 @@ Here are the results of training a PPO agent on the `onestep-v0` using the examp
     <table>
 	    <tr>
     	    <td style="padding:10px">
-        	    <img src="resources/ep_reward.png" width="400"/>
+        	    <img src="resources/ep_reward.png" width="390"/>
       	    </td>
             <td style="padding:10px">
-            	<img src="resources/ep_length.png" width="400"/>
+            	<img src="resources/ep_length.png" width="390"/>
             </td>
         </tr>
     </table>
