@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 env:
-  PYTHON_VERSION: python:3.8.10
+  PYTHON_VERSION: python:3.8
 
 jobs:
 
