@@ -22,5 +22,7 @@ def test_onsestep():
     env = gym.make(
         "voxelgym2D:onestep-v0",
         discrete_actions=False,
+        inference_mode=True,
+        multi_output=True,
     )
     check_env(env)
