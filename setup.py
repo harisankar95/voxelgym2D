@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="voxelgym2D",
-    version="0.1",
+    version="0.2",
     description="Gym environment for 2D grid path planning",
     author="Harisankar Babu",
     author_email="harisankar995@gmail.com",

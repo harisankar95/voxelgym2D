@@ -5,10 +5,10 @@ A gym environment for voxel/grid based reinforcement learning for path planning.
     <table>
 	    <tr>
     	    <td style="padding:10px">
-        	    <img src="resources/solution_1.gif" width="375"/>
+        	    <img src="https://github.com/harisankar95/voxelgym2D/raw/main/resources/solution_1.gif" width="375"/>
       	    </td>
             <td style="padding:10px">
-            	<img src="resources/solution_2.gif" width="375"/>
+            	<img src="https://github.com/harisankar95/voxelgym2D/raw/main/resources/solution_2.gif" width="375"/>
             </td>
         </tr>
     </table>
@@ -21,10 +21,10 @@ Here are the results of training a PPO agent on the `onestep-v0` using the examp
     <table>
 	    <tr>
     	    <td style="padding:10px">
-        	    <img src="resources/ep_reward.png" width="375"/>
+        	    <img src="https://github.com/harisankar95/voxelgym2D/raw/main/resources/ep_reward.png" width="375"/>
       	    </td>
             <td style="padding:10px">
-            	<img src="resources/ep_length.png" width="375"/>
+            	<img src="https://github.com/harisankar95/voxelgym2D/raw/main/resources/ep_length.png" width="375"/>
             </td>
         </tr>
     </table>
@@ -85,7 +85,7 @@ The documentation can be found [here](https://harisankar95.github.io/voxelgym2D/
 - [ ] Add documentation
 
 ## Known issues
-- [ ] Currently only supports gym==0.21.0 :neutral_face,hence setuptools==65.5.0 is required to install gym.
+- [ ] Currently only supports gym==0.21.0 :neutral_face:,hence setuptools==65.5.0 is required to install gym.
 
 ## Contributing
 Contributions are welcome! Please open an issue or a pull request.
