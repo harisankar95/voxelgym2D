@@ -33,23 +33,20 @@ Here are the results of training a PPO agent on the `onestep-v0` using the examp
 
 ## Installation
 ```bash
-git clone https://github.com/harisankar95/voxelgym2D.git ~/path/to/repo
-cd ~/path/to/repo
-pip install .
-
-# to aditionally install stable_baselines 3 and pytorch (optional)
-pip install .[sb3]
+pip install git+https://github.com/harisankar95/voxelgym2D.git
 ```
 
-or directly from github :smile:
+or directly from PyPI :smile:
 
 ```bash
-pip install git+https://github.com/harisankar95/voxelgym2D.git
+pip install voxelgym2D
 ```
 
 ## Development
 To install the package in development mode, run the following command in the root directory of the repository:
 ```bash
+git clone https://github.com/harisankar95/voxelgym2D.git ~/path/to/repo
+cd ~/path/to/repo
 pip install -e .[dev]
 
 # to aditionally install stable_baselines 3 and pytorch (optional)
