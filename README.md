@@ -75,6 +75,8 @@ The documentation can be found [here](https://harisankar95.github.io/voxelgym2D/
 ## Changelog
 ### 0.1.0
 - Initial release of voxelgym 2D environments tested with stable_baselines 3 (v1.6.2) and python 3.8
+### 0.2.0
+- Available on PyPI, sphinx documentation in work
 
 ## TODO
 - [x] Add 2D environments
@@ -82,7 +84,7 @@ The documentation can be found [here](https://harisankar95.github.io/voxelgym2D/
 - [ ] Add documentation
 
 ## Known issues
-- [ ] Currently only supports gym==0.21.0 :neutral_face:,hence setuptools==65.5.0 is required to install gym.
+- [ ] Currently only supports gym==0.21.0 :neutral_face:, hence setuptools==65.5.0 is required to install gym.
 
 ## Contributing
 Contributions are welcome! Please open an issue or a pull request.
