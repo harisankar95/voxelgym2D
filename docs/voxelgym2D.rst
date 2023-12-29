@@ -1,6 +1,11 @@
 voxelgym2D package
 ==================
 
+.. automodule:: voxelgym2D
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Subpackages
 -----------
 
@@ -8,12 +13,3 @@ Subpackages
    :maxdepth: 4
 
    voxelgym2D.envs
-
-Module contents
----------------
-
-.. automodule:: voxelgym2D
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :inherited-members:

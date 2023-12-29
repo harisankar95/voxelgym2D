@@ -7,9 +7,12 @@ Welcome to Voxelgym2D's documentation!
 ======================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
+   Voxelgym2D <./INTRO.md>
+   Installation <./INSTALL.md>
+   Usage <./USAGE.md>
    modules
 
 Indices and tables
@@ -17,4 +20,3 @@ Indices and tables
 
 * :ref:`genindex`
 * :ref:`modindex`
-* :ref:`search`
