@@ -1,12 +1,18 @@
+import os
+
 from setuptools import find_packages, setup
+
+# read the version from version.txt
+with open(os.path.join("voxelgym2D", "version.txt"), encoding="utf-8") as file_handler:
+    __version__ = file_handler.read().strip()
 
 setup(
     name="voxelgym2D",
-    version="0.2",
+    version=__version__,
     description="Gym environment for 2D grid path planning",
     author="Harisankar Babu",
     author_email="harisankar995@gmail.com",
-    keywords="reinforcement-learning machine-learning gym openai python data-science",
+    keywords=["reinforcement-learning", "machine-learning", "gym", "openai", "python", "gymnasium"],
     license="MIT",
     url="https://github.com/harisankar95/voxelgym2D.git",
     classifiers=[
@@ -18,17 +24,16 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
     ],
-    packages=find_packages(),
+    packages=[package for package in find_packages() if package.startswith("voxelgym2D")],
     package_data={
-        "voxelgym2D": ["envs/maps/*.npy"],
+        "voxelgym2D": ["envs/maps/*.npy", "version.txt"],
     },
     install_requires=[
-        # sb3 support for gym 0.21
-        "gym==0.21",
+        "gymnasium",
         "numpy",
         "scikit-image",
         "opencv-python",
-        "pathfinding==1.0.1",
+        "pathfinding>=1.0.4",
         # rendering
         "matplotlib",
     ],
@@ -43,11 +48,16 @@ setup(
             "tox",
             "sphinx",
             "sphinx_rtd_theme",
+            "recommonmark",
+            "nbsphinx",
+            "sphinx-autodoc-typehints",
+            "sphinx-copybutton",
+            "sphinx-prompt",
+            "sphinx-notfound-page",
+            "sphinx-version-warning",
+            "sphinx-autodoc-annotation",
         ],
-        "sb3": [
-            "stable-baselines3[extra]==1.6.2",
-            "sb3-contrib==1.6.2",
-        ],
+        "sb3": ["stable-baselines3[extra]>=2.0.0", "sb3-contrib>=2.0.0", "rl_zoo3>=2.0.0"],
     },
-    python_requires=">=3.7",
+    python_requires=">=3.8",
 )

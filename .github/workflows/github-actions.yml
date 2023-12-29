@@ -1,4 +1,4 @@
-name: CI
+name: Test
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
@@ -26,7 +26,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install setuptools==65.5.0
+          python -m pip install --upgrade pip
+          pip install setuptools wheel twine
           pip install -e .[dev]
   
       - name: Pylint
@@ -43,7 +44,7 @@ jobs:
 
       - name: Pytest
         run: |
-          coverage run -m pytest tests/
+          coverage run --source voxelgym2D -m pytest tests/
           coverage report
 
       - name: Build docs
