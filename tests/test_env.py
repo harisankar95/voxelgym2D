@@ -1,19 +1,17 @@
 """Test the environment."""
 
-import gym
+import gymnasium as gym
 import numpy as np
-import pytest
-from gym.utils.env_checker import check_env
+from gymnasium.utils.env_checker import check_env
 
-import voxelgym2D
+from voxelgym2D.envs import VoxelGymOneStep
 
 
 def test_onsestep():
     """test onestep env"""
     env = gym.make("voxelgym2D:onestep-v0")
-    check_env(env)
-    _ = env.reset()
-    _, i = env.reset(return_info=True)
+    check_env(env.unwrapped, skip_render_check=True)
+    _, i = env.reset(seed=1234)
     # assert i is a dict
     assert isinstance(i, dict)
 
@@ -22,7 +20,19 @@ def test_onsestep():
     env = gym.make(
         "voxelgym2D:onestep-v0",
         discrete_actions=False,
-        inference_mode=True,
-        multi_output=True,
     )
-    check_env(env)
+    check_env(env.unwrapped, skip_render_check=True)
+
+
+def test_action_to_bins():
+    """Test the action to bins function"""
+    assert VoxelGymOneStep.action_to_bins(np.array([-1])) == 0
+    assert VoxelGymOneStep.action_to_bins(np.array([-0.75])) == 1
+    assert VoxelGymOneStep.action_to_bins(np.array([-0.5])) == 2
+    assert VoxelGymOneStep.action_to_bins(np.array([-0.25])) == 3
+    assert VoxelGymOneStep.action_to_bins(np.array([0])) == 4
+
+    assert VoxelGymOneStep.action_to_bins(np.array([0.25])) == 5
+    assert VoxelGymOneStep.action_to_bins(np.array([0.5])) == 6
+    assert VoxelGymOneStep.action_to_bins(np.array([0.75])) == 7
+    assert VoxelGymOneStep.action_to_bins(np.array([1])) == 7
