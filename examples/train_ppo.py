@@ -150,7 +150,7 @@ if __name__ == "__main__":
         normalize_images=True,
         features_extractor_class=SimpleCNN,
         features_extractor_kwargs=dict(features_dim=2048),
-        net_arch=[dict(vf=[512, 256], pi=[512, 256])],
+        net_arch=dict(vf=[512, 256], pi=[512, 256]),
     )
 
     model = PPO(

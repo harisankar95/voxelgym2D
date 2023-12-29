@@ -5,7 +5,7 @@
 [![Pipeline](https://github.com/harisankar95/voxelgym2D/actions/workflows/test-main.yml/badge.svg?branch=main)](https://github.com/harisankar95/voxelgym2D/actions/workflows/test-main.yml)
 [![codestyle](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-A gym environment for voxel/grid based reinforcement learning for path planning.
+A gymnasium environment for voxel/grid based reinforcement learning for path planning.
 
 <div id="solution-table">
     <table>
@@ -109,7 +109,22 @@ The documentation can be found [here](https://harisankar95.github.io/voxelgym2D/
 
 Contributions are welcome! Please open an issue or a pull request.
 
+## Citation
+
+If you use this project in your research, please cite it using the following BibTeX entry:
+
+```bibtex
+@misc{Babu_2023,
+author={Babu, Harisankar}, 
+title={Reinforcement Learning Based Path Planning for Autonomous Flight},
+url={https://publica.fraunhofer.de/handle/publica/442672},
+year={2023}, 
+month={Jan},
+}
+```
+
 ## References
 
+- [Gymnasium](https://gymnasium.farama.org/)
 - [OpenAI Gym](https://arxiv.org/abs/1606.01540)
 - [Stable Baselines 3](http://jmlr.org/papers/v22/20-1364.html)

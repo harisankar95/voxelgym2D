@@ -1,6 +1,6 @@
 # Voxelgym2D
 
-A gym environment for voxel/grid based reinforcement learning for path planning.
+A gymnasium environment for voxel/grid based reinforcement learning for path planning.
 
 <div id="solution-table">
     <table>
