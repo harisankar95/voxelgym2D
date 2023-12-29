@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>voxelgym2D package &mdash; Voxelgym2D 0.1 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <title>voxelgym2D package &mdash; Voxelgym2D 0.3.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=4d8c61bb" />
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=710356f7"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+        <script src="_static/js/versionwarning.js?v=d4224a34"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -27,13 +36,16 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search"  style="background: white" >
 
           
           
           <a href="index.html" class="icon icon-home">
             Voxelgym2D
           </a>
+              <div class="version">
+                0.3.0
+              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -44,13 +56,23 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="INTRO.html">Voxelgym2D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="INSTALL.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="INSTALL.html#pypi">PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="INSTALL.html#github">GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="INSTALL.html#for-development-purpose-use-editable-mode">For development purpose use editable mode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="USAGE.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="USAGE.html#basic-usage">Basic usage</a></li>
+</ul>
+</li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">voxelgym2D</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">voxelgym2D package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html">voxelgym2D.envs package</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#module-voxelgym2D">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -61,20 +83,19 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Voxelgym2D</a>
       </nav>
 
       <div class="wy-nav-content">
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="modules.html">voxelgym2D</a></li>
       <li class="breadcrumb-item active">voxelgym2D package</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/voxelgym2D.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -82,8 +103,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="voxelgym2d-package">
-<h1>voxelgym2D package<a class="headerlink" href="#voxelgym2d-package" title="Permalink to this heading"></a></h1>
+  <section id="module-voxelgym2D">
+<span id="voxelgym2d-package"></span><h1>voxelgym2D package<a class="headerlink" href="#module-voxelgym2D" title="Permalink to this heading"></a></h1>
 <section id="subpackages">
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
 <div class="toctree-wrapper compound">
@@ -91,50 +112,119 @@
 <li class="toctree-l1"><a class="reference internal" href="voxelgym2D.envs.html">voxelgym2D.envs package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="voxelgym2D.envs.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="voxelgym2D.envs.html#module-voxelgym2D.envs.base_env">voxelgym2D.envs.base_env module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv"><code class="docutils literal notranslate"><span class="pre">BaseEnv</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.close"><code class="docutils literal notranslate"><span class="pre">BaseEnv.close()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.find_target"><code class="docutils literal notranslate"><span class="pre">BaseEnv.find_target()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.get_logger"><code class="docutils literal notranslate"><span class="pre">BaseEnv.get_logger()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.make_astar_matrix"><code class="docutils literal notranslate"><span class="pre">BaseEnv.make_astar_matrix()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.metadata"><code class="docutils literal notranslate"><span class="pre">BaseEnv.metadata</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.ordinal"><code class="docutils literal notranslate"><span class="pre">BaseEnv.ordinal()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.render"><code class="docutils literal notranslate"><span class="pre">BaseEnv.render()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.reset"><code class="docutils literal notranslate"><span class="pre">BaseEnv.reset()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.run_astar"><code class="docutils literal notranslate"><span class="pre">BaseEnv.run_astar()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.seed"><code class="docutils literal notranslate"><span class="pre">BaseEnv.seed()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.slice_grid_map"><code class="docutils literal notranslate"><span class="pre">BaseEnv.slice_grid_map()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.soft_reset"><code class="docutils literal notranslate"><span class="pre">BaseEnv.soft_reset()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.step"><code class="docutils literal notranslate"><span class="pre">BaseEnv.step()</span></code></a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter"><code class="docutils literal notranslate"><span class="pre">CustomFormatter</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.FORMATS"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.FORMATS</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.bold_red"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.bold_red</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.format"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.format()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.format_"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.format_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.grey"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.grey</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter._format"><code class="docutils literal notranslate"><span class="pre">CustomFormatter._format</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.white"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.white</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.green"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.green</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.yellow"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.yellow</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.purple"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.purple</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.red"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.red</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.reset"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.reset</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.yellow"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.yellow</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.COLORED_FORMATS"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.COLORED_FORMATS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.format"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.format()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.__init__"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.converter"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.converter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.default_msec_format"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.default_msec_format</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.default_time_format"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.default_time_format</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.formatException"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.formatException()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.formatMessage"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.formatMessage()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.formatStack"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.formatStack()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.formatTime"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.formatTime()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.usesTime"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.usesTime()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomLogger"><code class="docutils literal notranslate"><span class="pre">CustomLogger</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomLogger.__init__"><code class="docutils literal notranslate"><span class="pre">CustomLogger.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomLogger._setup_logger"><code class="docutils literal notranslate"><span class="pre">CustomLogger._setup_logger()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomLogger.get_logger"><code class="docutils literal notranslate"><span class="pre">CustomLogger.get_logger()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv"><code class="docutils literal notranslate"><span class="pre">BaseEnv</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.metadata"><code class="docutils literal notranslate"><span class="pre">BaseEnv.metadata</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.__init__"><code class="docutils literal notranslate"><span class="pre">BaseEnv.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.render_mode"><code class="docutils literal notranslate"><span class="pre">BaseEnv.render_mode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.observation_space"><code class="docutils literal notranslate"><span class="pre">BaseEnv.observation_space</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.get_logger"><code class="docutils literal notranslate"><span class="pre">BaseEnv.get_logger()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.find_obstacle_neighbor_count"><code class="docutils literal notranslate"><span class="pre">BaseEnv.find_obstacle_neighbor_count()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._start_end_counts"><code class="docutils literal notranslate"><span class="pre">BaseEnv._start_end_counts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._make_astar_matrix"><code class="docutils literal notranslate"><span class="pre">BaseEnv._make_astar_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._run_astar"><code class="docutils literal notranslate"><span class="pre">BaseEnv._run_astar()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._slice_grid_map"><code class="docutils literal notranslate"><span class="pre">BaseEnv._slice_grid_map()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._find_target"><code class="docutils literal notranslate"><span class="pre">BaseEnv._find_target()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._get_info"><code class="docutils literal notranslate"><span class="pre">BaseEnv._get_info()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._create_base_obs"><code class="docutils literal notranslate"><span class="pre">BaseEnv._create_base_obs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._get_obs"><code class="docutils literal notranslate"><span class="pre">BaseEnv._get_obs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._get_new_index_from_counts"><code class="docutils literal notranslate"><span class="pre">BaseEnv._get_new_index_from_counts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._soft_reset"><code class="docutils literal notranslate"><span class="pre">BaseEnv._soft_reset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.reset"><code class="docutils literal notranslate"><span class="pre">BaseEnv.reset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._compute_reward"><code class="docutils literal notranslate"><span class="pre">BaseEnv._compute_reward()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._take_action"><code class="docutils literal notranslate"><span class="pre">BaseEnv._take_action()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._is_protocol"><code class="docutils literal notranslate"><span class="pre">BaseEnv._is_protocol</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._np_random"><code class="docutils literal notranslate"><span class="pre">BaseEnv._np_random</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.close"><code class="docutils literal notranslate"><span class="pre">BaseEnv.close()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.get_wrapper_attr"><code class="docutils literal notranslate"><span class="pre">BaseEnv.get_wrapper_attr()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.np_random"><code class="docutils literal notranslate"><span class="pre">BaseEnv.np_random</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.reward_range"><code class="docutils literal notranslate"><span class="pre">BaseEnv.reward_range</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.spec"><code class="docutils literal notranslate"><span class="pre">BaseEnv.spec</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.unwrapped"><code class="docutils literal notranslate"><span class="pre">BaseEnv.unwrapped</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.action_space"><code class="docutils literal notranslate"><span class="pre">BaseEnv.action_space</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.step"><code class="docutils literal notranslate"><span class="pre">BaseEnv.step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.render"><code class="docutils literal notranslate"><span class="pre">BaseEnv.render()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.ordinal"><code class="docutils literal notranslate"><span class="pre">BaseEnv.ordinal()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="voxelgym2D.envs.html#module-voxelgym2D.envs.env_one_step">voxelgym2D.envs.env_one_step module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.__init__"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.action_space"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.action_space</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._compute_reward"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._compute_reward()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.action_to_bins"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.action_to_bins()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._create_base_obs"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._create_base_obs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._find_target"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._find_target()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._get_info"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._get_info()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._get_new_index_from_counts"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._get_new_index_from_counts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._get_obs"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._get_obs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._is_protocol"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._is_protocol</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._make_astar_matrix"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._make_astar_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._np_random"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._np_random</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._run_astar"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._run_astar()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._slice_grid_map"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._slice_grid_map()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._soft_reset"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._soft_reset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._start_end_counts"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._start_end_counts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._take_action"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._take_action()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.close"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.close()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.find_obstacle_neighbor_count"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.find_obstacle_neighbor_count()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.get_logger"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.get_logger()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.get_wrapper_attr"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.get_wrapper_attr()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.metadata"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.metadata</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.np_random"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.np_random</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.ordinal"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.ordinal()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.render"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.render()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.render_mode"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.render_mode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.reset"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.reset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.reward_range"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.reward_range</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.spec"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.spec</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.step"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.unwrapped"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.unwrapped</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._new_world_center"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._new_world_center</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._next_new_world_center"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._next_new_world_center</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._agent_location"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._agent_location</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._target_location"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._target_location</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._path"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._path</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.ini_astarPath"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.ini_astarPath</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.astarPath"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.astarPath</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.random_gen"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.random_gen</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="voxelgym2D.envs.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.observation_space"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.observation_space</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="voxelgym2D.envs.html#module-voxelgym2D.envs">Module contents</a></li>
 </ul>
 </li>
 </ul>
 </div>
-</section>
-<section id="module-voxelgym2D">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-voxelgym2D" title="Permalink to this heading"></a></h2>
 </section>
 </section>
 
@@ -152,9 +242,6 @@
     <p>&#169; Copyright 2023, Harisankar Babu.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

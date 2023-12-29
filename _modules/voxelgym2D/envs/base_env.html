@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>voxelgym2D.envs.base_env &mdash; Voxelgym2D 0.1 documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <title>voxelgym2D.envs.base_env &mdash; Voxelgym2D 0.3.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=4d8c61bb" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=710356f7"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../../_static/copybutton.js?v=f281be69"></script>
+        <script src="../../../_static/js/versionwarning.js?v=d4224a34"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -24,13 +33,16 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search"  style="background: white" >
 
           
           
           <a href="../../../index.html" class="icon icon-home">
             Voxelgym2D
           </a>
+              <div class="version">
+                0.3.0
+              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -41,20 +53,40 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">voxelgym2D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../INTRO.html">Voxelgym2D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../INSTALL.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../INSTALL.html#pypi">PyPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../INSTALL.html#github">GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../INSTALL.html#for-development-purpose-use-editable-mode">For development purpose use editable mode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../USAGE.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../USAGE.html#basic-usage">Basic usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">voxelgym2D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../voxelgym2D.html">voxelgym2D package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../voxelgym2D.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../voxelgym2D.envs.html">voxelgym2D.envs package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../index.html">Voxelgym2D</a>
       </nav>
 
       <div class="wy-nav-content">
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
@@ -71,83 +103,141 @@
   <h1>Source code for voxelgym2D.envs.base_env</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;Base class for all environments&quot;&quot;&quot;</span>
 
-<span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">import</span> <span class="nn">math</span>
 <span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
 <span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">product</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">Formatter</span><span class="p">,</span> <span class="n">Logger</span><span class="p">,</span> <span class="n">LogRecord</span><span class="p">,</span> <span class="n">StreamHandler</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span>
 
 <span class="kn">import</span> <span class="nn">cv2</span>
-<span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
 <span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">mpatches</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">gym.utils</span> <span class="kn">import</span> <span class="n">seeding</span>
+<span class="kn">from</span> <span class="nn">gymnasium.utils</span> <span class="kn">import</span> <span class="n">seeding</span>
 <span class="kn">from</span> <span class="nn">pathfinding.core.diagonal_movement</span> <span class="kn">import</span> <span class="n">DiagonalMovement</span>
 <span class="kn">from</span> <span class="nn">pathfinding.core.grid</span> <span class="kn">import</span> <span class="n">Grid</span>
+<span class="kn">from</span> <span class="nn">pathfinding.core.node</span> <span class="kn">import</span> <span class="n">GridNode</span>
 <span class="kn">from</span> <span class="nn">pathfinding.finder.a_star</span> <span class="kn">import</span> <span class="n">AStarFinder</span>
 <span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">draw</span>
 
 
-<span class="c1"># based on https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output</span>
-<div class="viewcode-block" id="CustomFormatter"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter">[docs]</a><span class="k">class</span> <span class="nc">CustomFormatter</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Colors for different log levels.&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="CustomFormatter"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter">[docs]</a><span class="k">class</span> <span class="nc">CustomFormatter</span><span class="p">(</span><span class="n">Formatter</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom formatter with colors for different log levels.&quot;&quot;&quot;</span>
 
-    <span class="n">grey</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[38;20m&quot;</span>
-    <span class="n">yellow</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[33;20m&quot;</span>
-    <span class="n">red</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[31;20m&quot;</span>
-    <span class="n">bold_red</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[31;1m&quot;</span>
+    <span class="n">_format</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="s2"> - </span><span class="si">%(levelname)s</span><span class="s2"> - </span><span class="si">%(message)s</span><span class="s2"> - </span><span class="si">%(filename)s</span><span class="s2">:</span><span class="si">%(lineno)d</span><span class="s2">&quot;</span>
+    <span class="c1"># different color for different log level</span>
+    <span class="c1"># https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output</span>
+    <span class="n">white</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[37;1m&quot;</span>
+    <span class="n">green</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[32;1m&quot;</span>
+    <span class="n">yellow</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[33;1m&quot;</span>
+    <span class="n">purple</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[35;1m&quot;</span>
+    <span class="n">red</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[31;1m&quot;</span>
     <span class="n">reset</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[0m&quot;</span>
-    <span class="n">format_</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="s2"> - </span><span class="si">%(name)s</span><span class="s2"> - </span><span class="si">%(levelname)s</span><span class="s2"> - </span><span class="si">%(message)s</span><span class="s2"> (</span><span class="si">%(filename)s</span><span class="s2">:</span><span class="si">%(lineno)d</span><span class="s2">)&quot;</span>
-
-    <span class="n">FORMATS</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">:</span> <span class="n">grey</span> <span class="o">+</span> <span class="n">format_</span> <span class="o">+</span> <span class="n">reset</span><span class="p">,</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">:</span> <span class="n">grey</span> <span class="o">+</span> <span class="n">format_</span> <span class="o">+</span> <span class="n">reset</span><span class="p">,</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">:</span> <span class="n">yellow</span> <span class="o">+</span> <span class="n">format_</span> <span class="o">+</span> <span class="n">reset</span><span class="p">,</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">:</span> <span class="n">red</span> <span class="o">+</span> <span class="n">format_</span> <span class="o">+</span> <span class="n">reset</span><span class="p">,</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">CRITICAL</span><span class="p">:</span> <span class="n">bold_red</span> <span class="o">+</span> <span class="n">format_</span> <span class="o">+</span> <span class="n">reset</span><span class="p">,</span>
+    <span class="n">COLORED_FORMATS</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;DEBUG&quot;</span><span class="p">:</span> <span class="n">white</span> <span class="o">+</span> <span class="n">_format</span> <span class="o">+</span> <span class="n">reset</span><span class="p">,</span>
+        <span class="s2">&quot;INFO&quot;</span><span class="p">:</span> <span class="n">green</span> <span class="o">+</span> <span class="n">_format</span> <span class="o">+</span> <span class="n">reset</span><span class="p">,</span>
+        <span class="s2">&quot;WARNING&quot;</span><span class="p">:</span> <span class="n">yellow</span> <span class="o">+</span> <span class="n">_format</span> <span class="o">+</span> <span class="n">reset</span><span class="p">,</span>
+        <span class="s2">&quot;ERROR&quot;</span><span class="p">:</span> <span class="n">purple</span> <span class="o">+</span> <span class="n">_format</span> <span class="o">+</span> <span class="n">reset</span><span class="p">,</span>
+        <span class="s2">&quot;CRITICAL&quot;</span><span class="p">:</span> <span class="n">red</span> <span class="o">+</span> <span class="n">_format</span> <span class="o">+</span> <span class="n">reset</span><span class="p">,</span>
     <span class="p">}</span>
 
-<div class="viewcode-block" id="CustomFormatter.format"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.format">[docs]</a>    <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">record</span><span class="p">):</span>
-        <span class="n">log_fmt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">FORMATS</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">levelno</span><span class="p">)</span>
-        <span class="n">formatter_</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="n">log_fmt</span><span class="p">,</span> <span class="n">datefmt</span><span class="o">=</span><span class="s2">&quot;%H:%M:%S&quot;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">formatter_</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">record</span><span class="p">)</span></div></div>
+<div class="viewcode-block" id="CustomFormatter.format"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.format">[docs]</a>    <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">record</span><span class="p">:</span> <span class="n">LogRecord</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Format the log record.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        record : LogRecord</span>
+<span class="sd">            Log record</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+<span class="sd">            Formatted log record</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">log_fmt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">COLORED_FORMATS</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">levelname</span><span class="p">)</span>
+        <span class="n">formatter</span> <span class="o">=</span> <span class="n">Formatter</span><span class="p">(</span><span class="n">log_fmt</span><span class="p">,</span> <span class="n">datefmt</span><span class="o">=</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">formatter</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">record</span><span class="p">)</span></div></div>
 
 
-<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
-<span class="n">formatter</span> <span class="o">=</span> <span class="n">CustomFormatter</span><span class="p">()</span>
-<span class="n">stream_handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">()</span>
-<span class="n">stream_handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
-<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">stream_handler</span><span class="p">)</span>
+<div class="viewcode-block" id="CustomLogger"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomLogger">[docs]</a><span class="k">class</span> <span class="nc">CustomLogger</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Logger class.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="CustomLogger.__init__"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomLogger.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">log_level</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;ERROR&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the logger.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name : str</span>
+<span class="sd">            Name of the logger.</span>
+<span class="sd">        log_level : str, optional</span>
+<span class="sd">            Log level, by default &quot;INFO&quot;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">log_level</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;DEBUG&quot;</span><span class="p">,</span> <span class="s2">&quot;INFO&quot;</span><span class="p">,</span> <span class="s2">&quot;WARNING&quot;</span><span class="p">,</span> <span class="s2">&quot;ERROR&quot;</span><span class="p">,</span> <span class="s2">&quot;CRITICAL&quot;</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid log level: </span><span class="si">{</span><span class="n">log_level</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log_level</span> <span class="o">=</span> <span class="n">log_level</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_logger</span><span class="p">:</span> <span class="n">Logger</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_setup_logger</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="CustomLogger._setup_logger"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomLogger._setup_logger">[docs]</a>    <span class="k">def</span> <span class="nf">_setup_logger</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Setup the logger.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_logger</span> <span class="o">=</span> <span class="n">Logger</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">log_level</span><span class="p">)</span>
+        <span class="n">formatter</span> <span class="o">=</span> <span class="n">CustomFormatter</span><span class="p">()</span>
+
+        <span class="c1"># log to stdout</span>
+        <span class="n">handler</span> <span class="o">=</span> <span class="n">StreamHandler</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+        <span class="n">handler</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">log_level</span><span class="p">)</span>
+        <span class="n">handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">handler</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CustomLogger.get_logger"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomLogger.get_logger">[docs]</a>    <span class="k">def</span> <span class="nf">get_logger</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Logger</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the logger</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        logging.Logger</span>
+<span class="sd">            Logger</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_logger</span></div></div>
 
 
 <div class="viewcode-block" id="BaseEnv"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv">[docs]</a><span class="k">class</span> <span class="nc">BaseEnv</span><span class="p">(</span><span class="n">gym</span><span class="o">.</span><span class="n">Env</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Base class for all environments&quot;&quot;&quot;</span>
 
-    <span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;render.modes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;human&quot;</span><span class="p">]}</span>
+    <span class="n">metadata</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;render_modes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;None&quot;</span><span class="p">],</span> <span class="s2">&quot;render_fps&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<div class="viewcode-block" id="BaseEnv.__init__"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
-        <span class="n">mapfile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;200x200x200_dense.npy&quot;</span><span class="p">,</span>
+        <span class="n">render_mode</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">mapfile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;600x600.npy&quot;</span><span class="p">,</span>
         <span class="n">view_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">21</span><span class="p">,</span>
+        <span class="n">image_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">42</span><span class="p">,</span>
         <span class="n">max_collisions</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
         <span class="n">max_steps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span>
         <span class="n">show_path</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
         <span class="n">multi_output</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
         <span class="n">partial_reward</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="n">image_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">42</span><span class="p">,</span>
-        <span class="n">test_mode</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
         <span class="n">inference_mode</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">log_level</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;ERROR&quot;</span><span class="p">,</span>
     <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
+<span class="sd">        render_mode : Optional[str], optional</span>
+<span class="sd">            render mode, by default None</span>
 <span class="sd">        mapfile : str</span>
 <span class="sd">            name of the map file in the maps folder</span>
 <span class="sd">        view_size : int</span>
 <span class="sd">            size of the view window for observation</span>
+<span class="sd">        image_size : int</span>
+<span class="sd">            size of the image to be returned as observation</span>
 <span class="sd">        max_collisions : int</span>
 <span class="sd">            maximum number of collisions allowed before episode ends</span>
 <span class="sd">        max_steps : int</span>
@@ -158,26 +248,33 @@
 <span class="sd">            whether to add additional outputs in the observation</span>
 <span class="sd">        partial_reward : bool</span>
 <span class="sd">            whether to give rewards for each step</span>
-<span class="sd">        image_size : int</span>
-<span class="sd">            size of the image to be returned as observation</span>
-<span class="sd">        test_mode : bool</span>
-<span class="sd">            whether to run in test mode, for evaluation during training</span>
 <span class="sd">        inference_mode : bool</span>
 <span class="sd">            whether to run in inference mode</span>
+<span class="sd">        log_level : str, optional</span>
+<span class="sd">            log level, by default &quot;ERROR&quot;. One of &quot;DEBUG&quot;, &quot;INFO&quot;, &quot;WARNING&quot;, &quot;ERROR&quot;, &quot;CRITICAL&quot;</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">render_mode</span> <span class="o">=</span> <span class="s2">&quot;None&quot;</span> <span class="k">if</span> <span class="n">render_mode</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">render_mode</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">render_mode</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s2">&quot;render_modes&quot;</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid render_mode: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">render_mode</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="c1"># current file path</span>
         <span class="n">__location__</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)))</span>
         <span class="c1"># load map</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">grid_map</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">__location__</span><span class="p">,</span> <span class="s2">&quot;maps&quot;</span><span class="p">,</span> <span class="n">mapfile</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">MAX_VAL_UINT</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.9</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">iinfo</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>  <span class="c1"># 0.9 to avoid overflow</span>
+
+        <span class="c1"># an arry to keep track of the start and target location</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_locations</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_locations</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start_end_counts</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">world_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid_map</span><span class="o">.</span><span class="n">shape</span>
 
-        <span class="k">if</span> <span class="n">view_size</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;view_size should be at least 10, setting to 10&quot;</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span> <span class="o">=</span> <span class="mi">10</span>
+        <span class="c1"># initialize the logger</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">CustomLogger</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">log_level</span><span class="o">=</span><span class="n">log_level</span><span class="p">)</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">view_size</span> <span class="o">&lt;</span> <span class="mi">16</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;view_size should be at least 16, setting to 16&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span> <span class="o">=</span> <span class="mi">16</span>
         <span class="k">elif</span> <span class="n">view_size</span> <span class="o">&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">world_size</span><span class="p">):</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
                 <span class="s2">&quot;view_size should be less than half of the world size, setting to </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
                 <span class="nb">int</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">world_size</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span>
             <span class="p">)</span>
@@ -187,42 +284,73 @@
 
         <span class="n">view_ratio</span> <span class="o">=</span> <span class="n">image_size</span> <span class="o">/</span> <span class="n">view_size</span>  <span class="c1"># should be even</span>
         <span class="k">if</span> <span class="n">view_ratio</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;view_ratio should be even, setting to </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">view_ratio</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;view_ratio should be even, setting to </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">view_ratio</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">image_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">view_ratio</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">view_size</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">image_size</span> <span class="o">=</span> <span class="n">image_size</span>
 
         <span class="c1"># set the agent to middle of the world map</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_new_world</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">)))</span>
+        <span class="c1"># place holder for target locations for the sliced view (_new_world)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new_target_locations</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">)),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_new_world_center</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">world_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">world_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="mi">2</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_next_new_world_center</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
             <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">world_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">world_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="mi">2</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span>
         <span class="p">)</span>
+        <span class="c1"># placeholder for mapping function</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="c1"># create a list of locations where the agent can be placed</span>
+        <span class="c1"># 25 possible locations for agent</span>
+        <span class="n">factor</span> <span class="o">=</span> <span class="mi">5</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">possible_start_locations</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+            <span class="nb">list</span><span class="p">(</span>
+                <span class="n">product</span><span class="p">(</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span>
+                        <span class="n">start</span><span class="o">=</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span> <span class="o">/</span> <span class="n">factor</span><span class="p">,</span>
+                        <span class="n">stop</span><span class="o">=</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">,</span>
+                        <span class="n">num</span><span class="o">=</span><span class="n">factor</span><span class="p">,</span>
+                        <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                        <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+                    <span class="p">),</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span>
+                        <span class="n">start</span><span class="o">=</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span> <span class="o">/</span> <span class="n">factor</span><span class="p">,</span>
+                        <span class="n">stop</span><span class="o">=</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">,</span>
+                        <span class="n">num</span><span class="o">=</span><span class="n">factor</span><span class="p">,</span>
+                        <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                        <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+                    <span class="p">),</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
         <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ini_distance_to_target</span> <span class="o">=</span> <span class="mf">0.0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">min_distance_to_target</span> <span class="o">=</span> <span class="mf">0.0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cost_astar</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ini_cost_astar</span> <span class="o">=</span> <span class="mf">0.0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">min_cost_astar</span> <span class="o">=</span> <span class="mf">0.0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">astar_runs</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_path</span><span class="p">:</span> <span class="n">List</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ini_astarPath</span><span class="p">:</span> <span class="n">List</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">astarPath</span><span class="p">:</span> <span class="n">List</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_astar_grid</span> <span class="o">=</span> <span class="n">Grid</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">action</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">action_cost</span> <span class="o">=</span> <span class="mf">0.0</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">obs_world</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_size</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obs_world</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_size</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obs_world_astar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_size</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">base_obs_world</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_size</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">num_targets_reached</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_step</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">num_collisions</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">test_mode</span> <span class="o">=</span> <span class="n">test_mode</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">inference_mode</span> <span class="o">=</span> <span class="n">inference_mode</span>
-        <span class="c1"># set back the agent to middle of the world map after these many targets</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">soft_reset_freq</span> <span class="o">=</span> <span class="mi">1500</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_mode</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">soft_reset_freq</span> <span class="o">=</span> <span class="mi">50</span>
+        <span class="c1"># set back the agent to a new location than the previous</span>
+        <span class="c1"># target location after these many episodes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">soft_reset_freq</span> <span class="o">=</span> <span class="mi">10</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">target_num</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_num</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">max_collisions</span> <span class="o">=</span> <span class="n">max_collisions</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">max_steps</span> <span class="o">=</span> <span class="n">max_steps</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">show_path</span> <span class="o">=</span> <span class="n">show_path</span>
@@ -232,13 +360,14 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">delta</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">product</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">delta</span><span class="o">.</span><span class="n">remove</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 
+        <span class="c1"># random number generator for shuffling the possible target locations</span>
+        <span class="n">seed_seq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">SeedSequence</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">random_gen</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">Generator</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">Generator</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">PCG64</span><span class="p">(</span><span class="n">seed_seq</span><span class="p">))</span>
+
         <span class="c1"># math constants</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">SQRT2</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">EXP1</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">EXP1_1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">EXP1</span> <span class="o">-</span> <span class="mi">1</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">seed</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">action_space</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">multi_output</span> <span class="o">=</span> <span class="n">multi_output</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">multi_output</span><span class="p">:</span>
@@ -254,43 +383,80 @@
             <span class="c1"># 3 channel 2D numpy arrays: CxWXH</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">observation_space</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">spaces</span><span class="o">.</span><span class="n">Box</span><span class="p">(</span>
                 <span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_size</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span>
-            <span class="p">)</span>
+            <span class="p">)</span></div>
 
-<div class="viewcode-block" id="BaseEnv.get_logger"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.get_logger">[docs]</a>    <span class="k">def</span> <span class="nf">get_logger</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">logging</span><span class="o">.</span><span class="n">Logger</span><span class="p">:</span>
+<div class="viewcode-block" id="BaseEnv.get_logger"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.get_logger">[docs]</a>    <span class="k">def</span> <span class="nf">get_logger</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Logger</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the logger</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
-<span class="sd">        logger : logging.Logger</span>
+<span class="sd">        logger : Logger</span>
 <span class="sd">            logger object</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">logger</span></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">logger</span></div>
 
-<div class="viewcode-block" id="BaseEnv.seed"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.seed">[docs]</a>    <span class="k">def</span> <span class="nf">seed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+<div class="viewcode-block" id="BaseEnv.find_obstacle_neighbor_count"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.find_obstacle_neighbor_count">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">find_obstacle_neighbor_count</span><span class="p">(</span><span class="n">grid_map</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Sets the seed for this env&#39;s random number generator(s).</span>
+<span class="sd">        Finds the number of neighboring obstacles for each cell in the grid map</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        seed : int, optional</span>
-<span class="sd">            Seed for the random number generator(s), by default None</span>
+<span class="sd">        grid_map : np.ndarray</span>
+<span class="sd">            grid map with obstacles marked as 1s and free cells marked as 0s</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
-<span class="sd">            Returns the list of seed used in this env&#39;s random number generators</span>
+<span class="sd">        neighbors : np.ndarray</span>
+<span class="sd">            number of neighboring obstacles for each cell in the grid map</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">np_random</span><span class="p">,</span> <span class="n">seed</span> <span class="o">=</span> <span class="n">seeding</span><span class="o">.</span><span class="n">np_random</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">seed</span><span class="p">]</span></div>
+        <span class="c1"># add a border of 1s around the grid map</span>
+        <span class="n">padded_grid_map</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">grid_map</span><span class="p">,</span> <span class="n">pad_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;constant&quot;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="c1"># get the neighbors of all cells</span>
+        <span class="n">neighbors</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">padded_grid_map</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+            <span class="o">+</span> <span class="n">padded_grid_map</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="o">+</span> <span class="n">padded_grid_map</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span>
+            <span class="o">+</span> <span class="n">padded_grid_map</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+            <span class="o">+</span> <span class="n">padded_grid_map</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span>
+            <span class="o">+</span> <span class="n">padded_grid_map</span><span class="p">[</span><span class="mi">2</span><span class="p">:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+            <span class="o">+</span> <span class="n">padded_grid_map</span><span class="p">[</span><span class="mi">2</span><span class="p">:,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="o">+</span> <span class="n">padded_grid_map</span><span class="p">[</span><span class="mi">2</span><span class="p">:,</span> <span class="mi">2</span><span class="p">:]</span>
+        <span class="p">)</span>
+        <span class="c1"># return the count of neighboring obstacles</span>
+        <span class="k">return</span> <span class="n">neighbors</span></div>
 
-<div class="viewcode-block" id="BaseEnv.make_astar_matrix"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.make_astar_matrix">[docs]</a>    <span class="k">def</span> <span class="nf">make_astar_matrix</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="BaseEnv._start_end_counts"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._start_end_counts">[docs]</a>    <span class="k">def</span> <span class="nf">_start_end_counts</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create arrays to keep track of the start and end cell counts</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        start_counts : np.ndarray</span>
+<span class="sd">            shape like self.grid_map with the count of start cells</span>
+<span class="sd">        end_counts : np.ndarray</span>
+<span class="sd">            shape like self.grid_map with the count of end cells</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">neighbors</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_obstacle_neighbor_count</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">grid_map</span><span class="p">)</span>
+
+        <span class="c1"># find all cells with value 0 and without any neighbors with value &gt; 0</span>
+        <span class="n">possible_start_cells</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">grid_map</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">neighbors</span> <span class="o">==</span> <span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
+        <span class="c1"># change all cells with value 0 to max value of int as they are not possible start cells</span>
+        <span class="n">possible_start_cells</span><span class="p">[</span><span class="n">possible_start_cells</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">MAX_VAL_UINT</span>
+        <span class="c1"># end cells are same as possible start cells</span>
+        <span class="n">possible_end_cells</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">possible_start_cells</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">possible_start_cells</span><span class="p">,</span> <span class="n">possible_end_cells</span></div>
+
+<div class="viewcode-block" id="BaseEnv._make_astar_matrix"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._make_astar_matrix">[docs]</a>    <span class="k">def</span> <span class="nf">_make_astar_matrix</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Creates the astar matrix for the current world map and sets the astar grid</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">_astar_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_world</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+        <span class="c1"># set the astar matrix to 1 for all cells with value 0 in the world map and 0 otherwise</span>
+        <span class="n">_astar_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_world</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_astar_grid</span> <span class="o">=</span> <span class="n">Grid</span><span class="p">(</span><span class="n">matrix</span><span class="o">=</span><span class="n">_astar_matrix</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span></div>
 
-<div class="viewcode-block" id="BaseEnv.run_astar"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.run_astar">[docs]</a>    <span class="k">def</span> <span class="nf">run_astar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]],</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<div class="viewcode-block" id="BaseEnv._run_astar"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._run_astar">[docs]</a>    <span class="k">def</span> <span class="nf">_run_astar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]],</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Runs the A* algorithm on the current world map and returns the path,</span>
 <span class="sd">        path cost and number of nodes visited</span>
@@ -318,21 +484,44 @@
             <span class="n">finder</span> <span class="o">=</span> <span class="n">AStarFinder</span><span class="p">(</span><span class="n">diagonal_movement</span><span class="o">=</span><span class="n">DiagonalMovement</span><span class="o">.</span><span class="n">always</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">finder</span> <span class="o">=</span> <span class="n">AStarFinder</span><span class="p">(</span><span class="n">diagonal_movement</span><span class="o">=</span><span class="n">DiagonalMovement</span><span class="o">.</span><span class="n">only_when_no_obstacle</span><span class="p">)</span>
-        <span class="n">path</span><span class="p">,</span> <span class="n">runs</span> <span class="o">=</span> <span class="n">finder</span><span class="o">.</span><span class="n">find_path</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_astar_grid</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">path_cost</span> <span class="o">=</span> <span class="n">end</span><span class="o">.</span><span class="n">g</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">path_cost</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+        <span class="n">path_w_node</span><span class="p">,</span> <span class="n">runs</span> <span class="o">=</span> <span class="n">finder</span><span class="o">.</span><span class="n">find_path</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_astar_grid</span><span class="p">)</span>
+        <span class="n">path_cost</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">path_w_node</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">path_w_node</span><span class="p">:</span>
+                <span class="n">is_gn</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">GridNode</span><span class="p">)</span>
+                <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="k">if</span> <span class="n">is_gn</span> <span class="k">else</span> <span class="n">node</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+                <span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+
+            <span class="n">path_cost</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="k">for</span> <span class="n">dx</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">path</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">path</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+                <span class="n">path_cost</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
         <span class="k">return</span> <span class="n">path</span><span class="p">,</span> <span class="n">path_cost</span><span class="p">,</span> <span class="n">runs</span></div>
 
-<div class="viewcode-block" id="BaseEnv.slice_grid_map"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.slice_grid_map">[docs]</a>    <span class="k">def</span> <span class="nf">slice_grid_map</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="BaseEnv._slice_grid_map"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._slice_grid_map">[docs]</a>    <span class="k">def</span> <span class="nf">_slice_grid_map</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="kc">None</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Slices the grid map into a 2D numpy array</span>
-<span class="sd">        of size (2*view_size, 2*view_size)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        Slices the grid map into a 2D numpy array of size (2*view_size, 2*view_size)</span>
+<span class="sd">        Generate a mapping from the sliced grid map to the original grid map</span>
 
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        mapping : Callable(int, int)</span>
+<span class="sd">            mapping from the sliced grid map to the original grid map</span>
+<span class="sd">        potential_start_location : Union[np.ndarray, None]</span>
+<span class="sd">            potential start location for the agent</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># slice the grid map into a 2D numpy array</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_new_world</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">)))</span>
+
+        <span class="c1"># new taget locations is of shape (2*view_size, 2*view_size) with all values</span>
+        <span class="c1"># as self.MAX_VAL_UINT and dtype as np.uint32</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new_target_locations</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span>
+            <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">)),</span>
+            <span class="n">fill_value</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">MAX_VAL_UINT</span><span class="p">,</span>
+            <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">,</span>
+        <span class="p">)</span>
+
         <span class="n">y_min</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_new_world_center</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
         <span class="n">y_max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_new_world_center</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">world_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
         <span class="n">x_min</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_new_world_center</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
@@ -344,13 +533,46 @@
         <span class="n">x_max_new</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">view_size</span> <span class="o">+</span> <span class="n">x_max</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_world_center</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_new_world</span><span class="p">[</span><span class="n">y_min_new</span><span class="p">:</span><span class="n">y_max_new</span><span class="p">,</span> <span class="n">x_min_new</span><span class="p">:</span><span class="n">x_max_new</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid_map</span><span class="p">[</span><span class="n">y_min</span><span class="p">:</span><span class="n">y_max</span><span class="p">,</span> <span class="n">x_min</span><span class="p">:</span><span class="n">x_max</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new_target_locations</span><span class="p">[</span><span class="n">y_min_new</span><span class="p">:</span><span class="n">y_max_new</span><span class="p">,</span> <span class="n">x_min_new</span><span class="p">:</span><span class="n">x_max_new</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_locations</span><span class="p">[</span>
+            <span class="n">y_min</span><span class="p">:</span><span class="n">y_max</span><span class="p">,</span> <span class="n">x_min</span><span class="p">:</span><span class="n">x_max</span>
+        <span class="p">]</span>
 
         <span class="c1"># set the edges to 1</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_new_world</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_world</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_world</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_world</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="c1"># create the new astar grid</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">make_astar_matrix</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="BaseEnv.find_target"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.find_target">[docs]</a>    <span class="k">def</span> <span class="nf">find_target</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="c1"># set the edges to self.MAX_VAL_UINT in the new target locations</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new_target_locations</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_target_locations</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_target_locations</span><span class="p">[</span>
+            <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_target_locations</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">MAX_VAL_UINT</span>
+        <span class="c1"># create the new astar grid</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_make_astar_matrix</span><span class="p">()</span>
+
+        <span class="c1"># define the mapping from the sliced grid map to the original grid map</span>
+        <span class="k">def</span> <span class="nf">_mapping</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">x_min</span> <span class="o">-</span> <span class="n">x_min_new</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">y_min</span> <span class="o">-</span> <span class="n">y_min_new</span>
+
+        <span class="c1"># find the start location in the sliced grid map</span>
+        <span class="c1"># shuffle the possible_start_locations</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">np_random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">possible_start_locations</span><span class="p">)</span>
+        <span class="c1"># iterate over possible_start_locations</span>
+        <span class="n">potential_start_location</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">start_location</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">possible_start_locations</span><span class="p">:</span>
+            <span class="c1"># check if the start location along with spacing = 1 is free of obstacles</span>
+            <span class="n">spacing</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_new_world</span><span class="p">[</span>
+                    <span class="n">start_location</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">spacing</span> <span class="p">:</span> <span class="n">start_location</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">spacing</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+                    <span class="n">start_location</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">spacing</span> <span class="p">:</span> <span class="n">start_location</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">spacing</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+                <span class="p">]</span>
+                <span class="o">==</span> <span class="mi">0</span>
+            <span class="p">):</span>
+                <span class="c1"># if free of obstacles, set the agent location to the start location</span>
+                <span class="n">potential_start_location</span> <span class="o">=</span> <span class="n">start_location</span>
+                <span class="k">break</span>
+
+        <span class="k">return</span> <span class="n">_mapping</span><span class="p">,</span> <span class="n">potential_start_location</span></div>
+
+<div class="viewcode-block" id="BaseEnv._find_target"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._find_target">[docs]</a>    <span class="k">def</span> <span class="nf">_find_target</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Finds a target location for the agent to move to</span>
 
@@ -358,74 +580,64 @@
 <span class="sd">        -------</span>
 <span class="sd">        target_location : np.ndarray</span>
 <span class="sd">            target location</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        RuntimeError</span>
+<span class="sd">            If a target location cannot be found</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="c1"># 10% of the time find easy target (close to agent)</span>
-        <span class="n">easy_target</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">np_random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.10</span><span class="p">)</span> <span class="k">else</span> <span class="kc">False</span>
-        <span class="n">colliding</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">easy_target</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">np_random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.10</span>
+        <span class="c1"># if not easy path, we don&#39;t want to sample within 8 cells of the agent</span>
+        <span class="c1"># increase the count of cells in self._new_target_locations to self.MAX_VAL_UINT</span>
+        <span class="c1"># for cells within 8 cells of the agent else 2 to have nothing close to the agent</span>
+        <span class="n">spread</span> <span class="o">=</span> <span class="mi">2</span> <span class="k">if</span> <span class="n">easy_target</span> <span class="k">else</span> <span class="mi">8</span>
         <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">while</span> <span class="n">colliding</span><span class="p">:</span>
-            <span class="n">nearby_clear</span> <span class="o">=</span> <span class="kc">True</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="n">easy_target</span><span class="p">:</span>
-                <span class="n">straight_path</span> <span class="o">=</span> <span class="kc">True</span>
-            <span class="n">target_location</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span>
-            <span class="k">while</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">target_location</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">):</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_new_target_locations</span><span class="p">[</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">spread</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">spread</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">spread</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">spread</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">MAX_VAL_UINT</span>
+            <span class="c1"># get a list of all the target locations with the count less than self.MAX_VAL_UINT</span>
+            <span class="n">possible_target_locations</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_new_target_locations</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">MAX_VAL_UINT</span><span class="p">)[:,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="c1"># shuffle the possible_target_locations</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">random_gen</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">possible_target_locations</span><span class="p">)</span>
+            <span class="c1"># iterate while possible_target_locations</span>
+            <span class="k">for</span> <span class="n">target_location</span> <span class="ow">in</span> <span class="n">possible_target_locations</span><span class="p">:</span>
                 <span class="k">if</span> <span class="ow">not</span> <span class="n">easy_target</span><span class="p">:</span>
-                    <span class="n">random_r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">np_random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">SQRT2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="n">random_r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">np_random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">SQRT2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
-                <span class="n">random_theta</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">np_random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
-                <span class="n">random_location</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">random_r</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">random_theta</span><span class="p">),</span> <span class="n">random_r</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">random_theta</span><span class="p">)])</span>
-                <span class="n">random_location</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">random_location</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
-                <span class="n">target_location</span> <span class="o">=</span> <span class="n">random_location</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span>
-                <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="n">target_location</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">amax</span><span class="p">(</span><span class="n">target_location</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">):</span>
-                    <span class="n">target_location</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_world</span><span class="p">[</span><span class="n">target_location</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">target_location</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">spacing</span> <span class="o">=</span> <span class="mi">1</span>
-                <span class="c1"># check immediate neighbors for obstacles</span>
-                <span class="n">y_min</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">target_location</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">spacing</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-                <span class="n">y_max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">target_location</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">spacing</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">))</span>
-                <span class="n">x_min</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">target_location</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">spacing</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-                <span class="n">x_max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">target_location</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">spacing</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">))</span>
-                <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_new_world</span><span class="p">[</span><span class="n">y_min</span><span class="p">:</span><span class="n">y_max</span><span class="p">,</span> <span class="n">x_min</span><span class="p">:</span><span class="n">x_max</span><span class="p">]</span> <span class="o">==</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                    <span class="n">nearby_clear</span> <span class="o">=</span> <span class="kc">False</span>
+                    <span class="c1"># check if its a straight path</span>
+                    <span class="n">rr</span><span class="p">,</span> <span class="n">cc</span> <span class="o">=</span> <span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">(</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                        <span class="n">target_location</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                        <span class="n">target_location</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                    <span class="p">)</span>
+                    <span class="n">straight_pixels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_world</span><span class="p">[</span><span class="n">cc</span><span class="p">,</span> <span class="n">rr</span><span class="p">]</span>
+                    <span class="n">straight_path</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">straight_pixels</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
 
-                <span class="k">if</span> <span class="n">nearby_clear</span><span class="p">:</span>
-                    <span class="k">if</span> <span class="ow">not</span> <span class="n">easy_target</span><span class="p">:</span>
-                        <span class="c1"># check if its a straight path</span>
-                        <span class="n">rr</span><span class="p">,</span> <span class="n">cc</span> <span class="o">=</span> <span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">(</span>
-                            <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-                            <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
-                            <span class="n">target_location</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-                            <span class="n">target_location</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
-                        <span class="p">)</span>
-                        <span class="n">straight_line</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">rr</span><span class="p">,</span> <span class="n">cc</span><span class="p">))</span>
-                        <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">straight_line</span><span class="p">:</span>
-                            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_world</span><span class="p">[</span><span class="n">pt</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                                <span class="n">straight_path</span> <span class="o">=</span> <span class="kc">False</span>
-                                <span class="k">break</span>
+                    <span class="k">if</span> <span class="n">straight_path</span><span class="p">:</span>
+                        <span class="k">continue</span>
 
-                        <span class="k">if</span> <span class="ow">not</span> <span class="n">straight_path</span><span class="p">:</span>
-                            <span class="c1"># Astar search to find the shortest path to the target</span>
-                            <span class="bp">self</span><span class="o">.</span><span class="n">astarPath</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cost_astar</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">astar_runs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">run_astar</span><span class="p">(</span><span class="n">target_location</span><span class="p">)</span>
-                            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">astarPath</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">astar_runs</span> <span class="o">&gt;</span> <span class="mi">60</span><span class="p">:</span>
-                                <span class="n">colliding</span> <span class="o">=</span> <span class="kc">False</span>
-                    <span class="k">else</span><span class="p">:</span>
-                        <span class="c1"># Astar search to find the shortest path to the target</span>
-                        <span class="bp">self</span><span class="o">.</span><span class="n">astarPath</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cost_astar</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">astar_runs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">run_astar</span><span class="p">(</span><span class="n">target_location</span><span class="p">)</span>
-                        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">astarPath</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                            <span class="n">colliding</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="c1"># Astar search to find the shortest path to the target</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">astarPath</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cost_astar</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">astar_runs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_run_astar</span><span class="p">(</span><span class="n">target_location</span><span class="p">)</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">astarPath</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">easy_target</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="n">target_location</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">astar_runs</span> <span class="o">&gt;</span> <span class="mi">60</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="n">target_location</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;   ---Target not set, soft reset---&quot;</span><span class="p">)</span>
+            <span class="c1"># increase the count of agent location in the self.state_counts to self.MAX_VAL_UINT</span>
+            <span class="c1"># so that the agent location is not sampled again</span>
+            <span class="n">mapped_start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">start_locations</span><span class="p">[</span><span class="n">mapped_start</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">MAX_VAL_UINT</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_soft_reset</span><span class="p">()</span>
             <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">9999</span><span class="p">:</span>
-                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-                    <span class="s2">&quot;   ---Target not set in </span><span class="si">%s</span><span class="s2"> tries! Setting agent back to reset conditions!&quot;</span><span class="p">,</span>
-                    <span class="n">count</span><span class="p">,</span>
-                <span class="p">)</span>
-                <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">soft_reset</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">target_location</span></div>
+            <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">100000</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Cannot find a target location&quot;</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">_get_info</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+<div class="viewcode-block" id="BaseEnv._get_info"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._get_info">[docs]</a>    <span class="k">def</span> <span class="nf">_get_info</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the info dictionary for the current step of the episode</span>
 
@@ -447,10 +659,11 @@
             <span class="s2">&quot;current step&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_step</span><span class="p">,</span>
             <span class="s2">&quot;no. of  collisions&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_collisions</span><span class="p">,</span>
             <span class="s2">&quot;grid map&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_world</span><span class="p">,</span>
-        <span class="p">}</span>
+            <span class="s2">&quot;obs with astar path&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">obs_world_astar</span><span class="p">,</span>
+        <span class="p">}</span></div>
 
     <span class="c1"># base observation is the world map which remains constant throughout the episode</span>
-    <span class="k">def</span> <span class="nf">_create_base_obs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="BaseEnv._create_base_obs"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._create_base_obs">[docs]</a>    <span class="k">def</span> <span class="nf">_create_base_obs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Creates the base observation for the episode which can be reused throughout the episode</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -459,12 +672,12 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">base_obs_world</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_world</span> <span class="o">*</span> <span class="mf">255.0</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">base_obs_world</span><span class="p">[:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="mf">0.3</span> <span class="o">*</span> <span class="mf">255.0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">base_obs_world</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="mf">255.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_obs_world</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="mf">255.0</span></div>
 
     <span class="c1"># observation is the world map with the agent location marked and the path taken</span>
     <span class="c1"># returns either a numpy array of shape (3, 2*view_size, 2*view_size)</span>
     <span class="c1"># or a OrderedDict of numpy arrays</span>
-    <span class="k">def</span> <span class="nf">_get_obs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">OrderedDict</span><span class="p">]:</span>
+<div class="viewcode-block" id="BaseEnv._get_obs"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._get_obs">[docs]</a>    <span class="k">def</span> <span class="nf">_get_obs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">OrderedDict</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the observation for the current step of the episode</span>
 
@@ -476,6 +689,12 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">obs_world</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_obs_world</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">obs_world</span><span class="p">[:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="mf">0.3</span> <span class="o">*</span> <span class="mf">255.0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">obs_world</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="mf">255.0</span>
+
+        <span class="c1"># mark the astar path in the self.obs_world_astar</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obs_world_astar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obs_world</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">astarPath</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">obs_world_astar</span><span class="p">[:,</span> <span class="n">pt</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="mf">0.6</span> <span class="o">*</span> <span class="mf">255.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obs_world_astar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">obs_world_astar</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">show_path</span> <span class="ow">and</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_path</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
             <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path</span><span class="p">:</span>
@@ -489,81 +708,136 @@
             <span class="n">dsize</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">image_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_size</span><span class="p">),</span>
             <span class="n">interpolation</span><span class="o">=</span><span class="n">cv2</span><span class="o">.</span><span class="n">INTER_NEAREST</span><span class="p">,</span>
         <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">obs_world</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">moveaxis</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obs_world</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">multi_output</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">obs_world</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obs_world</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">moveaxis</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obs_world</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">multi_output</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">obs_world</span>
         <span class="k">return</span> <span class="n">OrderedDict</span><span class="p">(</span>
             <span class="p">{</span>
                 <span class="c1"># normalize delta</span>
                 <span class="s2">&quot;delta&quot;</span><span class="p">:</span> <span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">),</span>
-                <span class="s2">&quot;world&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">obs_world</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">),</span>
+                <span class="s2">&quot;world&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">obs_world</span><span class="p">,</span>
             <span class="p">}</span>
-        <span class="p">)</span>
+        <span class="p">)</span></div>
 
-    <span class="c1"># set the agent&#39;s location at the center of the map</span>
-<div class="viewcode-block" id="BaseEnv.soft_reset"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.soft_reset">[docs]</a>    <span class="k">def</span> <span class="nf">soft_reset</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Moves the agent to the center of the map and resets the target&quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_new_world_center</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">world_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">world_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="mi">2</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">slice_grid_map</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">target_num</span> <span class="o">=</span> <span class="mi">0</span></div>
-
-<div class="viewcode-block" id="BaseEnv.reset"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="n">return_info</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">OrderedDict</span><span class="p">],</span> <span class="n">Dict</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">OrderedDict</span><span class="p">]:</span>
+<div class="viewcode-block" id="BaseEnv._get_new_index_from_counts"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._get_new_index_from_counts">[docs]</a>    <span class="k">def</span> <span class="nf">_get_new_index_from_counts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">counts_mat</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">alpha_p</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Resets the environment to the initial state and returns the initial observation</span>
+<span class="sd">        Returns a new index sampled from the counts matrix</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        return_info : bool, optional</span>
-<span class="sd">            whether to return the info dictionary, by default False</span>
+<span class="sd">        counts_mat : np.ndarray</span>
+<span class="sd">            counts matrix from which is used to sample the new index</span>
+<span class="sd">        alpha_p : float</span>
+<span class="sd">            parameter to control the sampling probability</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        sampled_index : Tuple[int, int]</span>
+<span class="sd">            sampled index from the counts matrix in the form (y, x)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">flattened_counts</span> <span class="o">=</span> <span class="n">counts_mat</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+        <span class="c1"># higher the count, lower the probability of sampling that cell</span>
+        <span class="n">probabilities</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">alpha_p</span> <span class="o">*</span> <span class="n">flattened_counts</span><span class="p">)</span>
+        <span class="n">probabilities</span> <span class="o">/=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">probabilities</span><span class="p">)</span>
+
+        <span class="c1"># sample a cell based on the probabilities</span>
+        <span class="n">sampled_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">np_random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flattened_counts</span><span class="p">)),</span> <span class="n">p</span><span class="o">=</span><span class="n">probabilities</span><span class="p">)</span>
+        <span class="c1"># convert the sampled index to 2D index</span>
+        <span class="n">sampled_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">sampled_index</span><span class="p">,</span> <span class="n">counts_mat</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">sampled_index</span>  <span class="c1"># (y, x)</span></div>
+
+    <span class="c1"># set the world center based on sampling from current counts</span>
+    <span class="c1"># tries to set the world center to cells with lower counts</span>
+<div class="viewcode-block" id="BaseEnv._soft_reset"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._soft_reset">[docs]</a>    <span class="k">def</span> <span class="nf">_soft_reset</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Moves the agent to the center of the map and resets the target&quot;&quot;&quot;</span>
+        <span class="n">sampled_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_new_index_from_counts</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_locations</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_new_world_center</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">sampled_index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sampled_index</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span><span class="p">,</span> <span class="n">potential_start_location</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_slice_grid_map</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">potential_start_location</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">potential_start_location</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span> <span class="o">=</span> <span class="n">potential_start_location</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_num</span> <span class="o">=</span> <span class="mi">0</span></div>
+
+<div class="viewcode-block" id="BaseEnv.reset"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">seed</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">options</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Dict</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">OrderedDict</span><span class="p">],</span> <span class="n">Dict</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Resets the environment to the initial state and returns the initial observation and info</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        seed : Union[int, None]</span>
+<span class="sd">            seed to use for the environment</span>
+<span class="sd">        options : Union[Dict, None]</span>
+<span class="sd">            options to use for the environment</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        obs : np.ndarray or OrderedDict</span>
 <span class="sd">            observation from manystep environment</span>
-<span class="sd">        info : Dict (optional)</span>
-<span class="sd">            info dictionary (optional) of the last step in the stack</span>
+<span class="sd">        info : Dict</span>
+<span class="sd">            info dictionary of the last step in the stack</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Initialize the RNG if the seed is manually passed</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+
+        <span class="c1"># seed the other random number generator</span>
+        <span class="k">if</span> <span class="n">seed</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">random_gen</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">seeding</span><span class="o">.</span><span class="n">np_random</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+
         <span class="bp">self</span><span class="o">.</span><span class="n">target_num</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target_num</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">soft_reset_freq</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">soft_reset</span><span class="p">()</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_mode</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1327455</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_soft_reset</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_new_world_center</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_next_new_world_center</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">current_step</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">num_collisions</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">slice_grid_map</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span><span class="p">,</span> <span class="n">potential_start_location</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_slice_grid_map</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">potential_start_location</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">potential_start_location</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">view_size</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span> <span class="o">=</span> <span class="n">potential_start_location</span>
         <span class="c1"># We will sample the target&#39;s location randomly until it does</span>
         <span class="c1"># not coincide with the agent&#39;s location</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_target</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_next_new_world_center</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_world_center</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">min_distance_to_target</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">min_cost_astar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cost_astar</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_find_target</span><span class="p">()</span>
+
+        <span class="c1"># increase the count of the start and target locations</span>
+        <span class="n">mapped_start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_locations</span><span class="p">[</span><span class="n">mapped_start</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">mapped_target</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_locations</span><span class="p">[</span><span class="n">mapped_target</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="c1"># set the next new world center at the mapped target location</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_next_new_world_center</span> <span class="o">=</span> <span class="n">mapped_target</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ini_distance_to_target</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">min_distance_to_target</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ini_astarPath</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">astarPath</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ini_cost_astar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">min_cost_astar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cost_astar</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">action</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">action_cost</span> <span class="o">=</span> <span class="mf">0.0</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_create_base_obs</span><span class="p">()</span>
         <span class="n">observation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_obs</span><span class="p">()</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_info</span><span class="p">())</span> <span class="k">if</span> <span class="n">return_info</span> <span class="k">else</span> <span class="n">observation</span></div>
+        <span class="k">return</span> <span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_info</span><span class="p">())</span></div>
 
-    <span class="k">def</span> <span class="nf">_compute_reward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">completion_reward</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="BaseEnv._compute_reward"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._compute_reward">[docs]</a>    <span class="k">def</span> <span class="nf">_compute_reward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">completion_reward</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Computes the reward for the current step of the episode</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
-    <span class="k">def</span> <span class="nf">_take_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]:</span>
+<div class="viewcode-block" id="BaseEnv._take_action"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._take_action">[docs]</a>    <span class="k">def</span> <span class="nf">_take_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Takes the action and returns the new agent lo</span>
+<span class="sd">        Takes the action and returns the new agent location</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
 <div class="viewcode-block" id="BaseEnv.close"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.close">[docs]</a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -571,9 +845,9 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BaseEnv.step"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.step">[docs]</a>    <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">OrderedDict</span><span class="p">],</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">Dict</span><span class="p">]:</span>
+<div class="viewcode-block" id="BaseEnv.step"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.step">[docs]</a>    <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">OrderedDict</span><span class="p">],</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">Dict</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Takes a step in the environment and returns the observation, reward, done and info</span>
+<span class="sd">        Takes a step in the environment and returns the observation, reward, terminated, truncated and info</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -582,10 +856,19 @@
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
-<span class="sd">        Observation, Reward, Done, Info : Tuple[Union[np.ndarray, OrderedDict], float, bool, Dict]</span>
-<span class="sd">            the observation, reward, done and info</span>
+<span class="sd">        observation : np.ndarray or OrderedDict</span>
+<span class="sd">            observation</span>
+<span class="sd">        reward : float</span>
+<span class="sd">            reward</span>
+<span class="sd">        terminated : bool</span>
+<span class="sd">            whether the episode terminated</span>
+<span class="sd">        truncated : bool</span>
+<span class="sd">            whether the episode was truncated</span>
+<span class="sd">        info : Dict</span>
+<span class="sd">            info dictionary</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">terminated</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">truncated</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="n">valid_action_path</span><span class="p">,</span> <span class="n">collision</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_take_action</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_step</span> <span class="o">+=</span> <span class="mi">1</span>
 
@@ -597,13 +880,13 @@
         <span class="k">if</span> <span class="n">collision</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">num_collisions</span> <span class="o">+=</span> <span class="mi">1</span>
             <span class="n">reward</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
-        <span class="k">else</span><span class="p">:</span>  <span class="c1"># only do it if the agent moves</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">valid_action_path</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># only do it if the agent moves</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">valid_action_path</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># remove the agent location</span>
             <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">):</span>
-                <span class="n">done</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="n">terminated</span> <span class="o">=</span> <span class="kc">True</span>
                 <span class="n">reward</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_reward</span><span class="p">(</span><span class="n">completion_reward</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">num_targets_reached</span> <span class="o">+=</span> <span class="mi">1</span>
-                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
                     <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> Target reached in </span><span class="si">%s</span><span class="s2"> steps, Collisions : </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">ordinal</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_targets_reached</span><span class="p">),</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">current_step</span><span class="p">,</span>
@@ -611,43 +894,49 @@
                 <span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">reward</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_reward</span><span class="p">(</span><span class="n">completion_reward</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">min_distance_to_target</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">))</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">min_cost_astar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cost_astar</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;No movement caused by action: </span><span class="si">%s</span><span class="s2">!&quot;</span><span class="p">,</span> <span class="n">action</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">min_distance_to_target</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_target_location</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">min_cost_astar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cost_astar</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_collisions</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_collisions</span><span class="p">:</span>
-            <span class="n">done</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">terminated</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">partial_reward</span><span class="p">:</span>
                 <span class="n">reward</span> <span class="o">+=</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">cost_astar</span> <span class="o">/</span> <span class="mi">100</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot; --Max Collisions! Collisions: </span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_collisions</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_collisions</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="p">(</span><span class="ow">not</span> <span class="n">done</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_step</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_steps</span><span class="p">):</span>
-            <span class="n">done</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot; --Max Collisions! Collisions: </span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">num_collisions</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">max_collisions</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="ow">not</span> <span class="n">terminated</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_step</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_steps</span><span class="p">):</span>
+            <span class="n">terminated</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">partial_reward</span><span class="p">:</span>
                 <span class="n">reward</span> <span class="o">+=</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">cost_astar</span> <span class="o">/</span> <span class="mi">100</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-                <span class="s2">&quot; --Max Steps: </span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">!&quot;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot; --Max Steps! Steps: </span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">current_step</span><span class="p">,</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">max_steps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
             <span class="p">)</span>
 
         <span class="n">observation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_obs</span><span class="p">()</span>
         <span class="n">info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_info</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">observation</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">info</span></div>
+        <span class="k">return</span> <span class="n">observation</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">terminated</span><span class="p">,</span> <span class="n">truncated</span><span class="p">,</span> <span class="n">info</span></div>
 
-<div class="viewcode-block" id="BaseEnv.render"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.render">[docs]</a>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;human&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="BaseEnv.render"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.render">[docs]</a>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Renders the environment</span>
-
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
-<span class="sd">        mode : str, optional</span>
-<span class="sd">            the mode to render in, by default &quot;human&quot;</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        None</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Voxelgym&quot;</span><span class="p">)</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">moveaxis</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obs_world</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Agent View&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">moveaxis</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obs_world</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Current Astar Path&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">moveaxis</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obs_world_astar</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 
         <span class="n">palette</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">77</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">255</span><span class="p">],</span> <span class="p">[</span><span class="mi">77</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">77</span><span class="p">],</span> <span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">77</span><span class="p">],</span> <span class="p">[</span><span class="mi">144</span><span class="p">,</span> <span class="mi">144</span><span class="p">,</span> <span class="mi">144</span><span class="p">]]</span>
         <span class="n">classes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;obstacles&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="p">,</span> <span class="s2">&quot;agent&quot;</span><span class="p">,</span> <span class="s2">&quot;last visited&quot;</span><span class="p">]</span>
@@ -686,9 +975,6 @@
     <p>&#169; Copyright 2023, Harisankar Babu.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>
