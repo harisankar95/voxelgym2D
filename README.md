@@ -1,5 +1,10 @@
 # voxelgym2D
 
+[![MIT License](https://img.shields.io/github/license/harisankar95/voxelgym2D)](LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/voxelgym2D)](https://pypi.org/project/voxelgym2D/)
+[![Pipeline](https://github.com/harisankar95/voxelgym2D/actions/workflows/test-main.yml/badge.svg?branch=main)](https://github.com/harisankar95/voxelgym2D/actions/workflows/test-main.yml)
+[![codestyle](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 A gym environment for voxel/grid based reinforcement learning for path planning.
 
 <div id="solution-table">
