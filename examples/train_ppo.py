@@ -2,11 +2,11 @@
 import os
 from typing import Callable
 
-import gym
+import gymnasium as gym
 import numpy as np
 import torch
 from stable_baselines3 import PPO
-from stable_baselines3.common.callbacks import BaseCallback
+from stable_baselines3.common.callbacks import BaseCallback, EvalCallback
 from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3.common.evaluation import evaluate_policy
 from stable_baselines3.common.monitor import Monitor
@@ -14,9 +14,6 @@ from stable_baselines3.common.results_plotter import load_results, ts2xy
 from stable_baselines3.common.torch_layers import BaseFeaturesExtractor
 from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv
 from torch import nn
-from tqdm.auto import tqdm
-
-import voxelgym2D
 
 # Create log dir
 LOG_DIR = "./logs/ppo_onestep/"
@@ -61,7 +58,6 @@ class SaveOnBestTrainingRewardCallback(BaseCallback):
     """
     Callback for saving a model (the check is done every ``check_freq`` steps)
     based on the training reward (in practice, we recommend using ``EvalCallback``).
-
     :param check_freq: (int)
     :param log_dir: (str) Path to the folder where the model will be saved.
       It must contains the file created by the ``Monitor`` wrapper.
@@ -78,10 +74,8 @@ class SaveOnBestTrainingRewardCallback(BaseCallback):
 
     def _init_callback(self) -> None:
         # Create folder if needed
-        if self.save_path is not None:
-            os.makedirs(self.save_path, exist_ok=True)
-        if self.chckpoint_path is not None:
-            os.makedirs(self.chckpoint_path, exist_ok=True)
+        if self.log_dir is not None:
+            os.makedirs(self.log_dir, exist_ok=True)
 
     def _on_step(self) -> bool:
         if self.n_calls % self.check_freq == 0:
@@ -89,15 +83,15 @@ class SaveOnBestTrainingRewardCallback(BaseCallback):
             x, y = ts2xy(load_results(self.log_dir), "timesteps")
             if len(x) > 0:
                 # Mean training reward over the last 100 episodes
-                mean_reward = np.mean(y[-100:])
+                _mean_reward = np.mean(y[-100:])
                 if self.verbose > 0:
                     print(f"Num timesteps: {self.num_timesteps}")
                     print(f"Best mean reward: {self.best_mean_reward:.2f}")
-                    print(f"Last mean reward per episode: {mean_reward:.2f}")
+                    print(f"Last mean reward per episode: {_mean_reward:.2f}")
 
                 # New best model, you could save the agent here
-                if mean_reward > self.best_mean_reward:
-                    self.best_mean_reward = mean_reward
+                if _mean_reward > self.best_mean_reward:
+                    self.best_mean_reward = _mean_reward
                     # Example for saving best model
                     if self.verbose > 0:
                         print(f"Saving new best model at {x[-1]} timesteps")
@@ -112,44 +106,10 @@ class SaveOnBestTrainingRewardCallback(BaseCallback):
         return True
 
 
-class ProgressBarCallback(BaseCallback):
-    """
-    :param pbar: (tqdm.pbar) Progress bar object
-    """
-
-    def __init__(self, pbar):
-        super().__init__()
-        self._pbar = pbar
-
-    def _on_step(self):
-        # Update the progress bar:
-        self._pbar.n = self.num_timesteps
-        self._pbar.update(0)
-
-
-# this callback uses the 'with' block, allowing for correct initialisation and destruction
-class ProgressBarManager:
-    """For tqdm progress bar in a with block."""
-
-    def __init__(self, total_timesteps):  # init object with total timesteps
-        self.pbar = None
-        self.total_timesteps = total_timesteps
-
-    def __enter__(self):  # create the progress bar and callback, return the callback
-        self.pbar = tqdm(total=self.total_timesteps)
-        return ProgressBarCallback(self.pbar)
-
-    def __exit__(self, exc_type, exc_val, exc_tb):  # close the callback
-        self.pbar.n = self.total_timesteps
-        self.pbar.update(0)
-        self.pbar.close()
-
-
 # scheduler
 def linear_schedule(initial_value: float) -> Callable[[float], float]:
     """
     Linear learning rate schedule.
-
     :param initial_value: Initial learning rate.
     :return: schedule that computes
       current learning rate depending on remaining progress
@@ -158,7 +118,6 @@ def linear_schedule(initial_value: float) -> Callable[[float], float]:
     def func(progress_remaining: float) -> float:
         """
         Progress will decrease from 1 (beginning) to 0.
-
         :param progress_remaining:
         :return: current learning rate
         """
@@ -176,15 +135,13 @@ if __name__ == "__main__":
         seed=1327455,
         monitor_dir=LOG_DIR,
         env_kwargs={
-            "mapfile": "200x200x200_dense.npy",
+            "mapfile": "600x600.npy",
             "view_size": 21,
+            "image_size": 42,
             "max_collisions": 0,
             "max_steps": 60,
-            "show_path": True,
             "discrete_actions": True,
-            "multi_output": False,
-            "partial_reward": True,
-            "image_size": 42,
+            "render_mode": "None",
         },
         vec_env_cls=SubprocVecEnv,
     )
@@ -209,33 +166,41 @@ if __name__ == "__main__":
         ent_coef=0.01,
         vf_coef=0.5,
         verbose=1,
-        tensorboard_log="tb_logs/ppo_onestep",
+        tensorboard_log="tb_logs/ppo_onestep/",
         target_kl=0.4,
     )
 
+    # Create eval env
     eval_env = DummyVecEnv(
         [
             lambda: Monitor(
                 gym.make(
                     "voxelgym2D:onestep-v0",
-                    mapfile="200x200x200_dense.npy",
+                    mapfile="600x600.npy",
                     view_size=21,
+                    image_size=42,
                     max_collisions=0,
                     max_steps=60,
-                    show_path=True,
                     discrete_actions=True,
-                    multi_output=False,
-                    partial_reward=True,
-                    test_mode=True,
-                    image_size=42,
+                    render_mode="None",
                 ),
                 filename=os.path.join(LOG_DIR, "eval"),
             )
         ]
     )
 
-    # n_eval_episodes = 50 since soft_reset_freq in base_env is 50
-    mean_reward, std_reward = evaluate_policy(model, eval_env, n_eval_episodes=50)
+    # Use deterministic actions for evaluation
+    eval_callback = EvalCallback(
+        eval_env,
+        best_model_save_path=None,
+        log_path=os.path.join(LOG_DIR, "eval"),
+        eval_freq=10000,
+        n_eval_episodes=50,
+        deterministic=True,
+        render=False,
+    )
+
+    mean_reward, std_reward = evaluate_policy(model, eval_env, n_eval_episodes=50, warn=False)
     print(f"mean_reward:{mean_reward:.2f} +/- {std_reward:.2f}")
 
     # Create Callback
@@ -243,17 +208,13 @@ if __name__ == "__main__":
 
     TOTAL_TIME_STEPS = 10000000
 
-    with ProgressBarManager(TOTAL_TIME_STEPS) as progress_callback:
-        # This is equivalent to callback=CallbackList([progress_callback, auto_save_callback])
-        model.learn(
-            total_timesteps=TOTAL_TIME_STEPS,
-            eval_env=eval_env,
-            n_eval_episodes=50,
-            eval_freq=10000,
-            callback=[progress_callback, auto_save_callback],
-        )
+    model.learn(
+        total_timesteps=TOTAL_TIME_STEPS,
+        callback=[auto_save_callback, eval_callback],
+        progress_bar=True,
+    )
 
     model.save(os.path.join(LOG_DIR, "ppo_saved"))
 
-    mean_reward, std_reward = evaluate_policy(model, eval_env, n_eval_episodes=50)
+    mean_reward, std_reward = evaluate_policy(model, eval_env, n_eval_episodes=50, warn=False)
     print(f"mean_reward:{mean_reward:.2f} +/- {std_reward:.2f}")
