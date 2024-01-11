@@ -13,6 +13,7 @@ import gymnasium as gym
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 import numpy as np
+from cv2.typing import MatLike
 from gymnasium.utils import seeding
 from pathfinding.core.diagonal_movement import DiagonalMovement
 from pathfinding.core.grid import Grid
@@ -599,7 +600,7 @@ class BaseEnv(gym.Env):
                     self.obs_world[:, pt[1], pt[0]] = 0.6 * 255.0
 
         # make channel last
-        obs_world_cv = np.moveaxis(self.obs_world, 0, 2)
+        obs_world_cv: Union[np.ndarray, MatLike] = np.moveaxis(self.obs_world, 0, 2)
         obs_world_cv = cv2.resize(
             obs_world_cv,
             dsize=(self.image_size, self.image_size),
