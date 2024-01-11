@@ -47,11 +47,4 @@ jobs:
           coverage run --source voxelgym2D -m pytest tests/
           coverage report
 
-      - name: Build docs
-        run: sphinx-build -b html docs/ ./public
 
-      - name: Deploy to gh pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public

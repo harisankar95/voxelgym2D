@@ -28,3 +28,12 @@ jobs:
         python setup.py sdist bdist_wheel
         twine check dist/*
         twine upload dist/*
+
+    - name: Build docs
+      run: sphinx-build -b html docs/ ./public
+
+    - name: Deploy to gh pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
