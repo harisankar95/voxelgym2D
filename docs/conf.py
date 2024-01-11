@@ -22,7 +22,6 @@ author = "Harisankar Babu"
 release = __version__
 version = __version__
 
-
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
@@ -43,9 +42,7 @@ extensions = [
     "sphinx_copybutton",  # for copy button
     "sphinx-prompt",  # for prompt
     "notfound.extension",  # for 404 page
-    "versionwarning.extension",  # for version warning
     "recommonmark",  # for markdown
-    "nbsphinx",  # for notebooks
 ]
 
 templates_path = ["_templates"]
@@ -55,6 +52,16 @@ html_sidebars = {
     ],
 }
 
+# 404 page
+notfound_context = {
+    "body": (
+        "<h1>Page not found.</h1>\n\n"
+        "<p>Unfortunately, the page <tt>{{ pagename }}</tt> wasn’t found.</p>\n\n"
+        "<p>Try using the search box or go to the homepage.</p>"
+    ),
+}
+
+# source suffix
 source_suffix = [".rst", ".md"]
 
 # The master toctree document.

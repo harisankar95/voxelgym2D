@@ -111,7 +111,7 @@ Contributions are welcome! Please open an issue or a pull request.
 
 ## Citation
 
-If you use this project in your research, please cite it using the following BibTeX entry:
+If you find this project useful, please cite it as:
 
 ```bibtex
 @misc{Babu_2023,
