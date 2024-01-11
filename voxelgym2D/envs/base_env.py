@@ -599,13 +599,13 @@ class BaseEnv(gym.Env):
                     self.obs_world[:, pt[1], pt[0]] = 0.6 * 255.0
 
         # make channel last
-        self.obs_world = np.moveaxis(self.obs_world, 0, 2)
-        self.obs_world = cv2.resize(
-            self.obs_world,
+        obs_world_cv = np.moveaxis(self.obs_world, 0, 2)
+        obs_world_cv = cv2.resize(
+            obs_world_cv,
             dsize=(self.image_size, self.image_size),
             interpolation=cv2.INTER_NEAREST,
         )
-        self.obs_world = np.moveaxis(self.obs_world, -1, 0).astype(dtype=np.uint8)
+        self.obs_world = np.moveaxis(obs_world_cv, -1, 0).astype(dtype=np.uint8)
 
         if not self.multi_output:
             return self.obs_world
