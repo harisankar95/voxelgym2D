@@ -29,11 +29,11 @@ setup(
         "voxelgym2D": ["envs/maps/*.npy", "version.txt"],
     },
     install_requires=[
-        "gymnasium",
+        "gymnasium<=0.29.1",
         "numpy",
-        "scikit-image",
+        "scikit-image<=0.22.0",
         "opencv-python",
-        "pathfinding>=1.0.4",
+        "pathfinding>=1.0.9",
         # rendering
         "matplotlib",
     ],
@@ -45,7 +45,7 @@ setup(
             "mypy",
             "isort",
             "black",
-            "tox",
+            "tox>=4.5.0",
             "sphinx",
             "sphinx_rtd_theme",
             "recommonmark",

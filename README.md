@@ -115,11 +115,11 @@ If you find this project useful, please cite it as:
 
 ```bibtex
 @misc{Babu_2023,
-author={Babu, Harisankar}, 
-title={Reinforcement Learning Based Path Planning for Autonomous Flight},
-url={https://publica.fraunhofer.de/handle/publica/442672},
-year={2023}, 
-month={Jan},
+    author={Babu, Harisankar}, 
+    title={Reinforcement Learning Based Path Planning for Autonomous Flight},
+    url={https://publica.fraunhofer.de/handle/publica/442672},
+    year={2023}, 
+    month={Jan},
 }
 ```
 
