@@ -33,7 +33,7 @@ setup(
         "numpy",
         "scikit-image<=0.22.0",
         "opencv-python",
-        "pathfinding>=1.0.4",
+        "pathfinding>=1.0.9",
         # rendering
         "matplotlib",
     ],
