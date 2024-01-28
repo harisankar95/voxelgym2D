@@ -47,6 +47,9 @@ setup(
             "isort",
             "black",
             "tox>=4.5.0",
+        ],
+        "sb3": ["stable-baselines3[extra]>=2.0.0", "sb3-contrib>=2.0.0", "rl_zoo3>=2.0.0"],
+        "docs": [
             "sphinx",
             "sphinx_rtd_theme",
             "recommonmark",
@@ -56,7 +59,6 @@ setup(
             "sphinx-notfound-page",
             "sphinx-autodoc-annotation",
         ],
-        "sb3": ["stable-baselines3[extra]>=2.0.0", "sb3-contrib>=2.0.0", "rl_zoo3>=2.0.0"],
     },
     python_requires=">=3.8",
     platforms=["any"],
