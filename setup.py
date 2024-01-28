@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 
 from setuptools import find_packages, setup
@@ -58,4 +59,5 @@ setup(
         "sb3": ["stable-baselines3[extra]>=2.0.0", "sb3-contrib>=2.0.0", "rl_zoo3>=2.0.0"],
     },
     python_requires=">=3.8",
+    platforms=["any"],
 )

@@ -17,10 +17,11 @@ with open(os.path.join("../voxelgym2D", "version.txt"), encoding="utf-8") as fil
 
 
 project = "Voxelgym2D"
-copyright = "2023, Harisankar Babu"
+copyright = "2024, Harisankar Babu"
 author = "Harisankar Babu"
 release = __version__
 version = __version__
+
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -52,14 +53,18 @@ html_sidebars = {
     ],
 }
 
-# 404 page
+# sphinx-notfound-page
 notfound_context = {
-    "body": (
-        "<h1>Page not found.</h1>\n\n"
-        "<p>Unfortunately, the page <tt>{{ pagename }}</tt> wasn’t found.</p>\n\n"
-        "<p>Try using the search box or go to the homepage.</p>"
-    ),
+    "title": "Page Not Found",
+    "body": """
+<h1>Page Not Found</h1>
+
+<p>Sorry, we couldn't find that page.</p>
+
+<p>Try using the search box or go to the homepage.</p>
+""",
 }
+notfound_urls_prefix = "/voxelgym2D/"
 
 # source suffix
 source_suffix = [".rst", ".md"]
