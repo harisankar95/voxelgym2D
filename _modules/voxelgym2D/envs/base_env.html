@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>voxelgym2D.envs.base_env &mdash; Voxelgym2D 0.3.0 documentation</title>
+  <title>voxelgym2D.envs.base_env &mdash; Voxelgym2D 0.3.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=eafc0fe6" />
@@ -17,7 +17,7 @@
   
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=710356f7"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=b89cf67f"></script>
         <script src="../../../_static/doctools.js?v=888ff710"></script>
         <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
         <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -39,7 +39,7 @@
             Voxelgym2D
           </a>
               <div class="version">
-                0.3.0
+                0.3.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -123,7 +123,7 @@
 <span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">draw</span>
 
 
-<div class="viewcode-block" id="CustomFormatter"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter">[docs]</a><span class="k">class</span> <span class="nc">CustomFormatter</span><span class="p">(</span><span class="n">Formatter</span><span class="p">):</span>
+<div class="viewcode-block" id="CustomFormatter"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter">[docs]</a><span class="k">class</span> <span class="nc">CustomFormatter</span><span class="p">(</span><span class="n">Formatter</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom formatter with colors for different log levels.&quot;&quot;&quot;</span>
 
     <span class="n">_format</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="s2"> - </span><span class="si">%(levelname)s</span><span class="s2"> - </span><span class="si">%(message)s</span><span class="s2"> - </span><span class="si">%(filename)s</span><span class="s2">:</span><span class="si">%(lineno)d</span><span class="s2">&quot;</span>
@@ -143,7 +143,7 @@
         <span class="s2">&quot;CRITICAL&quot;</span><span class="p">:</span> <span class="n">red</span> <span class="o">+</span> <span class="n">_format</span> <span class="o">+</span> <span class="n">reset</span><span class="p">,</span>
     <span class="p">}</span>
 
-<div class="viewcode-block" id="CustomFormatter.format"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomFormatter.format">[docs]</a>    <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">record</span><span class="p">:</span> <span class="n">LogRecord</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<div class="viewcode-block" id="CustomFormatter.format"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.format">[docs]</a>    <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">record</span><span class="p">:</span> <span class="n">LogRecord</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Format the log record.</span>
 
@@ -162,10 +162,10 @@
         <span class="k">return</span> <span class="n">formatter</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">record</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="CustomLogger"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomLogger">[docs]</a><span class="k">class</span> <span class="nc">CustomLogger</span><span class="p">:</span>
+<div class="viewcode-block" id="CustomLogger"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomLogger">[docs]</a><span class="k">class</span> <span class="nc">CustomLogger</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Logger class.&quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="CustomLogger.__init__"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomLogger.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">log_level</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;ERROR&quot;</span><span class="p">):</span>
+<div class="viewcode-block" id="CustomLogger.__init__"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomLogger.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">log_level</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;ERROR&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize the logger.</span>
 
@@ -183,7 +183,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_logger</span><span class="p">:</span> <span class="n">Logger</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_setup_logger</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="CustomLogger._setup_logger"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomLogger._setup_logger">[docs]</a>    <span class="k">def</span> <span class="nf">_setup_logger</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CustomLogger._setup_logger"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomLogger._setup_logger">[docs]</a>    <span class="k">def</span> <span class="nf">_setup_logger</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Setup the logger.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_logger</span> <span class="o">=</span> <span class="n">Logger</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">log_level</span><span class="p">)</span>
@@ -195,7 +195,7 @@
         <span class="n">handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">handler</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="CustomLogger.get_logger"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.CustomLogger.get_logger">[docs]</a>    <span class="k">def</span> <span class="nf">get_logger</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Logger</span><span class="p">:</span>
+<div class="viewcode-block" id="CustomLogger.get_logger"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomLogger.get_logger">[docs]</a>    <span class="k">def</span> <span class="nf">get_logger</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Logger</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the logger</span>
 
@@ -207,12 +207,12 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_logger</span></div></div>
 
 
-<div class="viewcode-block" id="BaseEnv"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv">[docs]</a><span class="k">class</span> <span class="nc">BaseEnv</span><span class="p">(</span><span class="n">gym</span><span class="o">.</span><span class="n">Env</span><span class="p">):</span>
+<div class="viewcode-block" id="BaseEnv"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv">[docs]</a><span class="k">class</span> <span class="nc">BaseEnv</span><span class="p">(</span><span class="n">gym</span><span class="o">.</span><span class="n">Env</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Base class for all environments&quot;&quot;&quot;</span>
 
     <span class="n">metadata</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;render_modes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;None&quot;</span><span class="p">],</span> <span class="s2">&quot;render_fps&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
 
-<div class="viewcode-block" id="BaseEnv.__init__"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<div class="viewcode-block" id="BaseEnv.__init__"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">render_mode</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">mapfile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;600x600.npy&quot;</span><span class="p">,</span>
@@ -384,7 +384,7 @@
                 <span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_size</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span>
             <span class="p">)</span></div>
 
-<div class="viewcode-block" id="BaseEnv.get_logger"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.get_logger">[docs]</a>    <span class="k">def</span> <span class="nf">get_logger</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Logger</span><span class="p">:</span>
+<div class="viewcode-block" id="BaseEnv.get_logger"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.get_logger">[docs]</a>    <span class="k">def</span> <span class="nf">get_logger</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Logger</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the logger</span>
 
@@ -395,7 +395,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">logger</span></div>
 
-<div class="viewcode-block" id="BaseEnv.find_obstacle_neighbor_count"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.find_obstacle_neighbor_count">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="BaseEnv.find_obstacle_neighbor_count"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.find_obstacle_neighbor_count">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">find_obstacle_neighbor_count</span><span class="p">(</span><span class="n">grid_map</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Finds the number of neighboring obstacles for each cell in the grid map</span>
@@ -426,7 +426,7 @@
         <span class="c1"># return the count of neighboring obstacles</span>
         <span class="k">return</span> <span class="n">neighbors</span></div>
 
-<div class="viewcode-block" id="BaseEnv._start_end_counts"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._start_end_counts">[docs]</a>    <span class="k">def</span> <span class="nf">_start_end_counts</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+<div class="viewcode-block" id="BaseEnv._start_end_counts"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._start_end_counts">[docs]</a>    <span class="k">def</span> <span class="nf">_start_end_counts</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Create arrays to keep track of the start and end cell counts</span>
 
@@ -447,7 +447,7 @@
         <span class="n">possible_end_cells</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">possible_start_cells</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">possible_start_cells</span><span class="p">,</span> <span class="n">possible_end_cells</span></div>
 
-<div class="viewcode-block" id="BaseEnv._make_astar_matrix"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._make_astar_matrix">[docs]</a>    <span class="k">def</span> <span class="nf">_make_astar_matrix</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="BaseEnv._make_astar_matrix"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._make_astar_matrix">[docs]</a>    <span class="k">def</span> <span class="nf">_make_astar_matrix</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Creates the astar matrix for the current world map and sets the astar grid</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -455,7 +455,7 @@
         <span class="n">_astar_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_world</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_astar_grid</span> <span class="o">=</span> <span class="n">Grid</span><span class="p">(</span><span class="n">matrix</span><span class="o">=</span><span class="n">_astar_matrix</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span></div>
 
-<div class="viewcode-block" id="BaseEnv._run_astar"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._run_astar">[docs]</a>    <span class="k">def</span> <span class="nf">_run_astar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]],</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<div class="viewcode-block" id="BaseEnv._run_astar"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._run_astar">[docs]</a>    <span class="k">def</span> <span class="nf">_run_astar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]],</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Runs the A* algorithm on the current world map and returns the path,</span>
 <span class="sd">        path cost and number of nodes visited</span>
@@ -498,7 +498,7 @@
 
         <span class="k">return</span> <span class="n">path</span><span class="p">,</span> <span class="n">path_cost</span><span class="p">,</span> <span class="n">runs</span></div>
 
-<div class="viewcode-block" id="BaseEnv._slice_grid_map"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._slice_grid_map">[docs]</a>    <span class="k">def</span> <span class="nf">_slice_grid_map</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="kc">None</span><span class="p">]]:</span>
+<div class="viewcode-block" id="BaseEnv._slice_grid_map"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._slice_grid_map">[docs]</a>    <span class="k">def</span> <span class="nf">_slice_grid_map</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="kc">None</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Slices the grid map into a 2D numpy array of size (2*view_size, 2*view_size)</span>
 <span class="sd">        Generate a mapping from the sliced grid map to the original grid map</span>
@@ -571,7 +571,7 @@
 
         <span class="k">return</span> <span class="n">_mapping</span><span class="p">,</span> <span class="n">potential_start_location</span></div>
 
-<div class="viewcode-block" id="BaseEnv._find_target"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._find_target">[docs]</a>    <span class="k">def</span> <span class="nf">_find_target</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<div class="viewcode-block" id="BaseEnv._find_target"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._find_target">[docs]</a>    <span class="k">def</span> <span class="nf">_find_target</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Finds a target location for the agent to move to</span>
 
@@ -636,7 +636,7 @@
             <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">100000</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Cannot find a target location&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BaseEnv._get_info"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._get_info">[docs]</a>    <span class="k">def</span> <span class="nf">_get_info</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+<div class="viewcode-block" id="BaseEnv._get_info"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._get_info">[docs]</a>    <span class="k">def</span> <span class="nf">_get_info</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the info dictionary for the current step of the episode</span>
 
@@ -662,7 +662,7 @@
         <span class="p">}</span></div>
 
     <span class="c1"># base observation is the world map which remains constant throughout the episode</span>
-<div class="viewcode-block" id="BaseEnv._create_base_obs"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._create_base_obs">[docs]</a>    <span class="k">def</span> <span class="nf">_create_base_obs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="BaseEnv._create_base_obs"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._create_base_obs">[docs]</a>    <span class="k">def</span> <span class="nf">_create_base_obs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Creates the base observation for the episode which can be reused throughout the episode</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -676,7 +676,7 @@
     <span class="c1"># observation is the world map with the agent location marked and the path taken</span>
     <span class="c1"># returns either a numpy array of shape (3, 2*view_size, 2*view_size)</span>
     <span class="c1"># or a OrderedDict of numpy arrays</span>
-<div class="viewcode-block" id="BaseEnv._get_obs"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._get_obs">[docs]</a>    <span class="k">def</span> <span class="nf">_get_obs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">OrderedDict</span><span class="p">]:</span>
+<div class="viewcode-block" id="BaseEnv._get_obs"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._get_obs">[docs]</a>    <span class="k">def</span> <span class="nf">_get_obs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">OrderedDict</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the observation for the current step of the episode</span>
 
@@ -719,7 +719,7 @@
             <span class="p">}</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="BaseEnv._get_new_index_from_counts"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._get_new_index_from_counts">[docs]</a>    <span class="k">def</span> <span class="nf">_get_new_index_from_counts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">counts_mat</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">alpha_p</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<div class="viewcode-block" id="BaseEnv._get_new_index_from_counts"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._get_new_index_from_counts">[docs]</a>    <span class="k">def</span> <span class="nf">_get_new_index_from_counts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">counts_mat</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">alpha_p</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns a new index sampled from the counts matrix</span>
 
@@ -748,7 +748,7 @@
 
     <span class="c1"># set the world center based on sampling from current counts</span>
     <span class="c1"># tries to set the world center to cells with lower counts</span>
-<div class="viewcode-block" id="BaseEnv._soft_reset"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._soft_reset">[docs]</a>    <span class="k">def</span> <span class="nf">_soft_reset</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="BaseEnv._soft_reset"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._soft_reset">[docs]</a>    <span class="k">def</span> <span class="nf">_soft_reset</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Moves the agent to the center of the map and resets the target&quot;&quot;&quot;</span>
         <span class="n">sampled_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_new_index_from_counts</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_locations</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_new_world_center</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">sampled_index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sampled_index</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
@@ -758,7 +758,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_agent_location</span> <span class="o">=</span> <span class="n">potential_start_location</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">target_num</span> <span class="o">=</span> <span class="mi">0</span></div>
 
-<div class="viewcode-block" id="BaseEnv.reset"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span>
+<div class="viewcode-block" id="BaseEnv.reset"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="o">*</span><span class="p">,</span>
         <span class="n">seed</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -826,25 +826,25 @@
         <span class="n">observation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_obs</span><span class="p">()</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_info</span><span class="p">())</span></div>
 
-<div class="viewcode-block" id="BaseEnv._compute_reward"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._compute_reward">[docs]</a>    <span class="k">def</span> <span class="nf">_compute_reward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">completion_reward</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="BaseEnv._compute_reward"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._compute_reward">[docs]</a>    <span class="k">def</span> <span class="nf">_compute_reward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">completion_reward</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Computes the reward for the current step of the episode</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
-<div class="viewcode-block" id="BaseEnv._take_action"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv._take_action">[docs]</a>    <span class="k">def</span> <span class="nf">_take_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]:</span>
+<div class="viewcode-block" id="BaseEnv._take_action"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._take_action">[docs]</a>    <span class="k">def</span> <span class="nf">_take_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Takes the action and returns the new agent location</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
-<div class="viewcode-block" id="BaseEnv.close"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.close">[docs]</a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="BaseEnv.close"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.close">[docs]</a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Closes all open matplotlib figures</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BaseEnv.step"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.step">[docs]</a>    <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">OrderedDict</span><span class="p">],</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">Dict</span><span class="p">]:</span>
+<div class="viewcode-block" id="BaseEnv.step"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.step">[docs]</a>    <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">OrderedDict</span><span class="p">],</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">Dict</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Takes a step in the environment and returns the observation, reward, terminated, truncated and info</span>
 
@@ -922,7 +922,7 @@
         <span class="n">info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_info</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">observation</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">terminated</span><span class="p">,</span> <span class="n">truncated</span><span class="p">,</span> <span class="n">info</span></div>
 
-<div class="viewcode-block" id="BaseEnv.render"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.render">[docs]</a>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="BaseEnv.render"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.render">[docs]</a>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Renders the environment</span>
 
@@ -946,7 +946,7 @@
         <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
 
     <span class="c1"># based on https://stackoverflow.com/questions/9647202/ordinal-numbers-replacement</span>
-<div class="viewcode-block" id="BaseEnv.ordinal"><a class="viewcode-back" href="../../../voxelgym2D.envs.html#voxelgym2D.envs.base_env.BaseEnv.ordinal">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="BaseEnv.ordinal"><a class="viewcode-back" href="../../../voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.ordinal">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">ordinal</span><span class="p">(</span><span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the ordinal of a number</span>
@@ -971,7 +971,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, Harisankar Babu.</p>
+    <p>&#169; Copyright 2024, Harisankar Babu.</p>
   </div>
 
    

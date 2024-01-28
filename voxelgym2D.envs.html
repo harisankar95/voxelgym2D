@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>voxelgym2D.envs package &mdash; Voxelgym2D 0.3.0 documentation</title>
+  <title>voxelgym2D.envs package &mdash; Voxelgym2D 0.3.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -18,7 +18,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=710356f7"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b89cf67f"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=4825356b"></script>
         <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -26,6 +26,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="voxelgym2D.envs.base_env module" href="voxelgym2D.envs.base_env.html" />
     <link rel="prev" title="voxelgym2D package" href="voxelgym2D.html" /> 
 </head>
 
@@ -41,7 +42,7 @@
             Voxelgym2D
           </a>
               <div class="version">
-                0.3.0
+                0.3.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -105,1103 +106,120 @@
 <span id="voxelgym2d-envs-package"></span><h1>voxelgym2D.envs package<a class="headerlink" href="#module-voxelgym2D.envs" title="Permalink to this heading"></a></h1>
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
-</section>
-<section id="module-voxelgym2D.envs.base_env">
-<span id="voxelgym2d-envs-base-env-module"></span><h2>voxelgym2D.envs.base_env module<a class="headerlink" href="#module-voxelgym2D.envs.base_env" title="Permalink to this heading"></a></h2>
-<p>Base class for all environments</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">voxelgym2D.envs.base_env.</span></span><span class="sig-name descname"><span class="pre">CustomFormatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datefmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#CustomFormatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></p>
-<p>Custom formatter with colors for different log levels.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter._format">
-<span class="sig-name descname"><span class="pre">_format</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'%(asctime)s</span> <span class="pre">-</span> <span class="pre">%(levelname)s</span> <span class="pre">-</span> <span class="pre">%(message)s</span> <span class="pre">-</span> <span class="pre">%(filename)s:%(lineno)d'</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter._format" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter.white">
-<span class="sig-name descname"><span class="pre">white</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[37;1m'</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter.white" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter.green">
-<span class="sig-name descname"><span class="pre">green</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[32;1m'</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter.green" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter.yellow">
-<span class="sig-name descname"><span class="pre">yellow</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[33;1m'</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter.yellow" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter.purple">
-<span class="sig-name descname"><span class="pre">purple</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[35;1m'</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter.purple" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter.red">
-<span class="sig-name descname"><span class="pre">red</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[31;1m'</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter.red" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter.reset">
-<span class="sig-name descname"><span class="pre">reset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[0m'</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter.reset" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter.COLORED_FORMATS">
-<span class="sig-name descname"><span class="pre">COLORED_FORMATS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'CRITICAL':</span> <span class="pre">'\x1b[31;1m%(asctime)s</span> <span class="pre">-</span> <span class="pre">%(levelname)s</span> <span class="pre">-</span> <span class="pre">%(message)s</span> <span class="pre">-</span> <span class="pre">%(filename)s:%(lineno)d\x1b[0m',</span> <span class="pre">'DEBUG':</span> <span class="pre">'\x1b[37;1m%(asctime)s</span> <span class="pre">-</span> <span class="pre">%(levelname)s</span> <span class="pre">-</span> <span class="pre">%(message)s</span> <span class="pre">-</span> <span class="pre">%(filename)s:%(lineno)d\x1b[0m',</span> <span class="pre">'ERROR':</span> <span class="pre">'\x1b[35;1m%(asctime)s</span> <span class="pre">-</span> <span class="pre">%(levelname)s</span> <span class="pre">-</span> <span class="pre">%(message)s</span> <span class="pre">-</span> <span class="pre">%(filename)s:%(lineno)d\x1b[0m',</span> <span class="pre">'INFO':</span> <span class="pre">'\x1b[32;1m%(asctime)s</span> <span class="pre">-</span> <span class="pre">%(levelname)s</span> <span class="pre">-</span> <span class="pre">%(message)s</span> <span class="pre">-</span> <span class="pre">%(filename)s:%(lineno)d\x1b[0m',</span> <span class="pre">'WARNING':</span> <span class="pre">'\x1b[33;1m%(asctime)s</span> <span class="pre">-</span> <span class="pre">%(levelname)s</span> <span class="pre">-</span> <span class="pre">%(message)s</span> <span class="pre">-</span> <span class="pre">%(filename)s:%(lineno)d\x1b[0m'}</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter.COLORED_FORMATS" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter.format">
-<span class="sig-name descname"><span class="pre">format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#CustomFormatter.format"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter.format" title="Permalink to this definition"></a></dt>
-<dd><p>Format the log record.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>record</strong> (<em>LogRecord</em>) – Log record</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Formatted log record</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datefmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Initialize the formatter with specified format strings.</p>
-<p>Initialize the formatter either with the specified format string, or a
-default as described above. Allow for specialized date formatting with
-the optional datefmt argument. If datefmt is omitted, you get an
-ISO8601-like (or RFC 3339-like) format.</p>
-<p>Use a style parameter of ‘%’, ‘{’ or ‘$’ to specify that you want to
-use one of %-formatting, <code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code> (<code class="docutils literal notranslate"><span class="pre">{}</span></code>) formatting or
-<code class="xref py py-class docutils literal notranslate"><span class="pre">string.Template</span></code> formatting in your format string.</p>
-<div class="versionchanged">
-<p><span class="versionmodified changed">Changed in version 3.2: </span>Added the <code class="docutils literal notranslate"><span class="pre">style</span></code> parameter.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="voxelgym2D.envs.base_env.html">voxelgym2D.envs.base_env module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter"><code class="docutils literal notranslate"><span class="pre">CustomFormatter</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter._format"><code class="docutils literal notranslate"><span class="pre">CustomFormatter._format</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.white"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.white</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.green"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.green</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.yellow"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.yellow</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.purple"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.purple</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.red"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.red</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.reset"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.reset</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.COLORED_FORMATS"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.COLORED_FORMATS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.format"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.format()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.__init__"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.converter"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.converter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.default_msec_format"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.default_msec_format</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.default_time_format"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.default_time_format</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.formatException"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.formatException()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.formatMessage"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.formatMessage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.formatStack"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.formatStack()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.formatTime"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.formatTime()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomFormatter.usesTime"><code class="docutils literal notranslate"><span class="pre">CustomFormatter.usesTime()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomLogger"><code class="docutils literal notranslate"><span class="pre">CustomLogger</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomLogger.__init__"><code class="docutils literal notranslate"><span class="pre">CustomLogger.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomLogger._setup_logger"><code class="docutils literal notranslate"><span class="pre">CustomLogger._setup_logger()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.CustomLogger.get_logger"><code class="docutils literal notranslate"><span class="pre">CustomLogger.get_logger()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv"><code class="docutils literal notranslate"><span class="pre">BaseEnv</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.metadata"><code class="docutils literal notranslate"><span class="pre">BaseEnv.metadata</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.__init__"><code class="docutils literal notranslate"><span class="pre">BaseEnv.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.render_mode"><code class="docutils literal notranslate"><span class="pre">BaseEnv.render_mode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.observation_space"><code class="docutils literal notranslate"><span class="pre">BaseEnv.observation_space</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.get_logger"><code class="docutils literal notranslate"><span class="pre">BaseEnv.get_logger()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.find_obstacle_neighbor_count"><code class="docutils literal notranslate"><span class="pre">BaseEnv.find_obstacle_neighbor_count()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._start_end_counts"><code class="docutils literal notranslate"><span class="pre">BaseEnv._start_end_counts()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._make_astar_matrix"><code class="docutils literal notranslate"><span class="pre">BaseEnv._make_astar_matrix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._run_astar"><code class="docutils literal notranslate"><span class="pre">BaseEnv._run_astar()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._slice_grid_map"><code class="docutils literal notranslate"><span class="pre">BaseEnv._slice_grid_map()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._find_target"><code class="docutils literal notranslate"><span class="pre">BaseEnv._find_target()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._get_info"><code class="docutils literal notranslate"><span class="pre">BaseEnv._get_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._create_base_obs"><code class="docutils literal notranslate"><span class="pre">BaseEnv._create_base_obs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._get_obs"><code class="docutils literal notranslate"><span class="pre">BaseEnv._get_obs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._get_new_index_from_counts"><code class="docutils literal notranslate"><span class="pre">BaseEnv._get_new_index_from_counts()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._soft_reset"><code class="docutils literal notranslate"><span class="pre">BaseEnv._soft_reset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.reset"><code class="docutils literal notranslate"><span class="pre">BaseEnv.reset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._compute_reward"><code class="docutils literal notranslate"><span class="pre">BaseEnv._compute_reward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._take_action"><code class="docutils literal notranslate"><span class="pre">BaseEnv._take_action()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._is_protocol"><code class="docutils literal notranslate"><span class="pre">BaseEnv._is_protocol</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv._np_random"><code class="docutils literal notranslate"><span class="pre">BaseEnv._np_random</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.close"><code class="docutils literal notranslate"><span class="pre">BaseEnv.close()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.get_wrapper_attr"><code class="docutils literal notranslate"><span class="pre">BaseEnv.get_wrapper_attr()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.np_random"><code class="docutils literal notranslate"><span class="pre">BaseEnv.np_random</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.reward_range"><code class="docutils literal notranslate"><span class="pre">BaseEnv.reward_range</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.spec"><code class="docutils literal notranslate"><span class="pre">BaseEnv.spec</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.unwrapped"><code class="docutils literal notranslate"><span class="pre">BaseEnv.unwrapped</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.action_space"><code class="docutils literal notranslate"><span class="pre">BaseEnv.action_space</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.step"><code class="docutils literal notranslate"><span class="pre">BaseEnv.step()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.render"><code class="docutils literal notranslate"><span class="pre">BaseEnv.render()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.base_env.html#voxelgym2D.envs.base_env.BaseEnv.ordinal"><code class="docutils literal notranslate"><span class="pre">BaseEnv.ordinal()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html">voxelgym2D.envs.env_one_step module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.__init__"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.action_space"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.action_space</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._compute_reward"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._compute_reward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.action_to_bins"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.action_to_bins()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._create_base_obs"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._create_base_obs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._find_target"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._find_target()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._get_info"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._get_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._get_new_index_from_counts"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._get_new_index_from_counts()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._get_obs"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._get_obs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._is_protocol"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._is_protocol</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._make_astar_matrix"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._make_astar_matrix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._np_random"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._np_random</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._run_astar"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._run_astar()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._slice_grid_map"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._slice_grid_map()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._soft_reset"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._soft_reset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._start_end_counts"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._start_end_counts()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._take_action"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._take_action()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.close"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.close()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.find_obstacle_neighbor_count"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.find_obstacle_neighbor_count()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.get_logger"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.get_logger()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.get_wrapper_attr"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.get_wrapper_attr()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.metadata"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.metadata</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.np_random"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.np_random</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.ordinal"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.ordinal()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.render"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.render()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.render_mode"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.render_mode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.reset"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.reset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.reward_range"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.reward_range</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.spec"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.spec</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.step"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.step()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.unwrapped"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.unwrapped</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._new_world_center"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._new_world_center</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._next_new_world_center"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._next_new_world_center</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._agent_location"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._agent_location</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._target_location"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._target_location</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep._path"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep._path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.ini_astarPath"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.ini_astarPath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.astarPath"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.astarPath</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.random_gen"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.random_gen</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="voxelgym2D.envs.env_one_step.html#voxelgym2D.envs.env_one_step.VoxelGymOneStep.observation_space"><code class="docutils literal notranslate"><span class="pre">VoxelGymOneStep.observation_space</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter.converter">
-<span class="sig-name descname"><span class="pre">converter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter.converter" title="Permalink to this definition"></a></dt>
-<dd><dl class="simple">
-<dt>localtime([seconds]) -&gt; (tm_year,tm_mon,tm_mday,tm_hour,tm_min,</dt><dd><p>tm_sec,tm_wday,tm_yday,tm_isdst)</p>
-</dd>
-</dl>
-<p>Convert seconds since the Epoch to a time tuple expressing local time.
-When ‘seconds’ is not passed in, convert the current time instead.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter.default_msec_format">
-<span class="sig-name descname"><span class="pre">default_msec_format</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'%s,%03d'</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter.default_msec_format" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter.default_time_format">
-<span class="sig-name descname"><span class="pre">default_time_format</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'%Y-%m-%d</span> <span class="pre">%H:%M:%S'</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter.default_time_format" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter.formatException">
-<span class="sig-name descname"><span class="pre">formatException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ei</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter.formatException" title="Permalink to this definition"></a></dt>
-<dd><p>Format and return the specified exception information as a string.</p>
-<p>This default implementation just uses
-traceback.print_exception()</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter.formatMessage">
-<span class="sig-name descname"><span class="pre">formatMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter.formatMessage" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter.formatStack">
-<span class="sig-name descname"><span class="pre">formatStack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stack_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter.formatStack" title="Permalink to this definition"></a></dt>
-<dd><p>This method is provided as an extension point for specialized
-formatting of stack information.</p>
-<p>The input data is a string as returned from a call to
-<code class="xref py py-func docutils literal notranslate"><span class="pre">traceback.print_stack()</span></code>, but with the last trailing newline
-removed.</p>
-<p>The base implementation just returns the value passed in.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter.formatTime">
-<span class="sig-name descname"><span class="pre">formatTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datefmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter.formatTime" title="Permalink to this definition"></a></dt>
-<dd><p>Return the creation time of the specified LogRecord as formatted text.</p>
-<p>This method should be called from format() by a formatter which
-wants to make use of a formatted time. This method can be overridden
-in formatters to provide for any specific requirement, but the
-basic behaviour is as follows: if datefmt (a string) is specified,
-it is used with time.strftime() to format the creation time of the
-record. Otherwise, an ISO8601-like (or RFC 3339-like) format is used.
-The resulting string is returned. This function uses a user-configurable
-function to convert the creation time to a tuple. By default,
-time.localtime() is used; to change this for a particular formatter
-instance, set the ‘converter’ attribute to a function with the same
-signature as time.localtime() or time.gmtime(). To change it for all
-formatters, for example if you want all logging times to be shown in GMT,
-set the ‘converter’ attribute in the Formatter class.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomFormatter.usesTime">
-<span class="sig-name descname"><span class="pre">usesTime</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomFormatter.usesTime" title="Permalink to this definition"></a></dt>
-<dd><p>Check if the format uses the creation time of the record.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomLogger">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">voxelgym2D.envs.base_env.</span></span><span class="sig-name descname"><span class="pre">CustomLogger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ERROR'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#CustomLogger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomLogger" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Logger class.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>str</em>) – </p></li>
-<li><p><strong>log_level</strong> (<em>str</em>) – </p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomLogger.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ERROR'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#CustomLogger.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomLogger.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Initialize the logger.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>str</em>) – Name of the logger.</p></li>
-<li><p><strong>log_level</strong> (<em>str</em><em>, </em><em>optional</em>) – Log level, by default “INFO”</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomLogger._setup_logger">
-<span class="sig-name descname"><span class="pre">_setup_logger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#CustomLogger._setup_logger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomLogger._setup_logger" title="Permalink to this definition"></a></dt>
-<dd><p>Setup the logger.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.CustomLogger.get_logger">
-<span class="sig-name descname"><span class="pre">get_logger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#CustomLogger.get_logger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.CustomLogger.get_logger" title="Permalink to this definition"></a></dt>
-<dd><p>Get the logger</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Logger</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>logging.Logger</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">voxelgym2D.envs.base_env.</span></span><span class="sig-name descname"><span class="pre">BaseEnv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">render_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'600x600.npy'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">21</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">42</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_collisions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partial_reward</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inference_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ERROR'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Env</span></code></p>
-<p>Base class for all environments</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv.metadata">
-<span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">,</span> <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code><span class="pre">]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'render_fps':</span> <span class="pre">1,</span> <span class="pre">'render_modes':</span> <span class="pre">['None']}</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv.metadata" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">render_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'600x600.npy'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">21</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">42</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_collisions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partial_reward</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inference_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ERROR'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv.__init__" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>render_mode</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – render mode, by default None</p></li>
-<li><p><strong>mapfile</strong> (<em>str</em>) – name of the map file in the maps folder</p></li>
-<li><p><strong>view_size</strong> (<em>int</em>) – size of the view window for observation</p></li>
-<li><p><strong>image_size</strong> (<em>int</em>) – size of the image to be returned as observation</p></li>
-<li><p><strong>max_collisions</strong> (<em>int</em>) – maximum number of collisions allowed before episode ends</p></li>
-<li><p><strong>max_steps</strong> (<em>int</em>) – maximum number of steps allowed before episode ends</p></li>
-<li><p><strong>show_path</strong> (<em>bool</em>) – whether to show the last travesed action path in the observation</p></li>
-<li><p><strong>multi_output</strong> (<em>bool</em>) – whether to add additional outputs in the observation</p></li>
-<li><p><strong>partial_reward</strong> (<em>bool</em>) – whether to give rewards for each step</p></li>
-<li><p><strong>inference_mode</strong> (<em>bool</em>) – whether to run in inference mode</p></li>
-<li><p><strong>log_level</strong> (<em>str</em><em>, </em><em>optional</em>) – log level, by default “ERROR”. One of “DEBUG”, “INFO”, “WARNING”, “ERROR”, “CRITICAL”</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv.render_mode">
-<span class="sig-name descname"><span class="pre">render_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv.render_mode" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv.observation_space">
-<span class="sig-name descname"><span class="pre">observation_space</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">spaces.Space[ObsType]</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv.observation_space" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv.get_logger">
-<span class="sig-name descname"><span class="pre">get_logger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv.get_logger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv.get_logger" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the logger</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>logger</strong> – logger object</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>Logger</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv.find_obstacle_neighbor_count">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_obstacle_neighbor_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid_map</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv.find_obstacle_neighbor_count"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv.find_obstacle_neighbor_count" title="Permalink to this definition"></a></dt>
-<dd><p>Finds the number of neighboring obstacles for each cell in the grid map</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>grid_map</strong> (<em>np.ndarray</em>) – grid map with obstacles marked as 1s and free cells marked as 0s</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>neighbors</strong> – number of neighboring obstacles for each cell in the grid map</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>np.ndarray</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv._start_end_counts">
-<span class="sig-name descname"><span class="pre">_start_end_counts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv._start_end_counts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv._start_end_counts" title="Permalink to this definition"></a></dt>
-<dd><p>Create arrays to keep track of the start and end cell counts</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</span></p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>start_counts</strong> (<em>np.ndarray</em>) – shape like self.grid_map with the count of start cells</p></li>
-<li><p><strong>end_counts</strong> (<em>np.ndarray</em>) – shape like self.grid_map with the count of end cells</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv._make_astar_matrix">
-<span class="sig-name descname"><span class="pre">_make_astar_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv._make_astar_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv._make_astar_matrix" title="Permalink to this definition"></a></dt>
-<dd><p>Creates the astar matrix for the current world map and sets the astar grid</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv._run_astar">
-<span class="sig-name descname"><span class="pre">_run_astar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv._run_astar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv._run_astar" title="Permalink to this definition"></a></dt>
-<dd><p>Runs the A* algorithm on the current world map and returns the path,
-path cost and number of nodes visited</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>target</strong> (<em>np.ndarray</em>) – target location</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</span></p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><ul class="simple">
-<li><p><strong>path</strong> (<em>List[Tuple[int, int]]</em>) – path from agent to target</p></li>
-<li><p><strong>path_cost</strong> (<em>float</em>) – cost of the path</p></li>
-<li><p><strong>runs</strong> (<em>int</em>) – number of nodes visited</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv._slice_grid_map">
-<span class="sig-name descname"><span class="pre">_slice_grid_map</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv._slice_grid_map"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv._slice_grid_map" title="Permalink to this definition"></a></dt>
-<dd><p>Slices the grid map into a 2D numpy array of size (2*view_size, 2*view_size)
-Generate a mapping from the sliced grid map to the original grid map</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]]</span></p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>mapping</strong> (<em>Callable(int, int)</em>) – mapping from the sliced grid map to the original grid map</p></li>
-<li><p><strong>potential_start_location</strong> (<em>Union[np.ndarray, None]</em>) – potential start location for the agent</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv._find_target">
-<span class="sig-name descname"><span class="pre">_find_target</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv._find_target"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv._find_target" title="Permalink to this definition"></a></dt>
-<dd><p>Finds a target location for the agent to move to</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>target_location</strong> – target location</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>np.ndarray</p>
-</dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError</strong> – If a target location cannot be found</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv._get_info">
-<span class="sig-name descname"><span class="pre">_get_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv._get_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv._get_info" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the info dictionary for the current step of the episode</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>info</strong> – info dictionary</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>Dict</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv._create_base_obs">
-<span class="sig-name descname"><span class="pre">_create_base_obs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv._create_base_obs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv._create_base_obs" title="Permalink to this definition"></a></dt>
-<dd><p>Creates the base observation for the episode which can be reused throughout the episode</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv._get_obs">
-<span class="sig-name descname"><span class="pre">_get_obs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv._get_obs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv._get_obs" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the observation for the current step of the episode</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>obs</strong> – observation for the current step of the episode</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>Union[np.ndarray, OrderedDict]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv._get_new_index_from_counts">
-<span class="sig-name descname"><span class="pre">_get_new_index_from_counts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">counts_mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv._get_new_index_from_counts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv._get_new_index_from_counts" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a new index sampled from the counts matrix</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>counts_mat</strong> (<em>np.ndarray</em>) – counts matrix from which is used to sample the new index</p></li>
-<li><p><strong>alpha_p</strong> (<em>float</em>) – parameter to control the sampling probability</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>sampled_index</strong> – sampled index from the counts matrix in the form (y, x)</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Tuple[int, int]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv._soft_reset">
-<span class="sig-name descname"><span class="pre">_soft_reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv._soft_reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv._soft_reset" title="Permalink to this definition"></a></dt>
-<dd><p>Moves the agent to the center of the map and resets the target</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv.reset">
-<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv.reset" title="Permalink to this definition"></a></dt>
-<dd><p>Resets the environment to the initial state and returns the initial observation and info</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>seed</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>None</em><em>]</em>) – seed to use for the environment</p></li>
-<li><p><strong>options</strong> (<em>Union</em><em>[</em><em>Dict</em><em>, </em><em>None</em><em>]</em>) – options to use for the environment</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>]</span></p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><ul class="simple">
-<li><p><strong>obs</strong> (<em>np.ndarray or OrderedDict</em>) – observation from manystep environment</p></li>
-<li><p><strong>info</strong> (<em>Dict</em>) – info dictionary of the last step in the stack</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv._compute_reward">
-<span class="sig-name descname"><span class="pre">_compute_reward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">completion_reward</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv._compute_reward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv._compute_reward" title="Permalink to this definition"></a></dt>
-<dd><p>Computes the reward for the current step of the episode</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>completion_reward</strong> (<em>bool</em>) – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv._take_action">
-<span class="sig-name descname"><span class="pre">_take_action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv._take_action"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv._take_action" title="Permalink to this definition"></a></dt>
-<dd><p>Takes the action and returns the new agent location</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]</span></p>
-</dd>
-<dt class="field-even">Parameters<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>action</strong> (<em>ndarray</em>) – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv._is_protocol">
-<span class="sig-name descname"><span class="pre">_is_protocol</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv._is_protocol" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv._np_random">
-<span class="sig-name descname"><span class="pre">_np_random</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">np.random.Generator</span> <span class="pre">|</span> <span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv._np_random" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv.close">
-<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv.close" title="Permalink to this definition"></a></dt>
-<dd><p>Closes all open matplotlib figures</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv.get_wrapper_attr">
-<span class="sig-name descname"><span class="pre">get_wrapper_attr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv.get_wrapper_attr" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the attribute <cite>name</cite> from the environment.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></span></p>
-</dd>
-<dt class="field-even">Parameters<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>name</strong> (<em>str</em>) – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv.np_random">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">np_random</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Generator</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv.np_random" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the environment’s internal <a class="reference internal" href="#voxelgym2D.envs.base_env.BaseEnv._np_random" title="voxelgym2D.envs.base_env.BaseEnv._np_random"><code class="xref py py-attr docutils literal notranslate"><span class="pre">_np_random</span></code></a> that if not set will initialise with a random seed.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Instances of <cite>np.random.Generator</cite></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv.reward_range">
-<span class="sig-name descname"><span class="pre">reward_range</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(-inf,</span> <span class="pre">inf)</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv.reward_range" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv.spec">
-<span class="sig-name descname"><span class="pre">spec</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">EnvSpec</span> <span class="pre">|</span> <span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv.spec" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv.unwrapped">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unwrapped</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Env</span><span class="p"><span class="pre">[</span></span><span class="pre">ObsType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ActType</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv.unwrapped" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the base non-wrapped environment.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The base non-wrapped <code class="xref py py-class docutils literal notranslate"><span class="pre">gymnasium.Env</span></code> instance</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>Env</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv.action_space">
-<span class="sig-name descname"><span class="pre">action_space</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">spaces.Space[ActType]</span></em><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv.action_space" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv.step">
-<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv.step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv.step" title="Permalink to this definition"></a></dt>
-<dd><p>Takes a step in the environment and returns the observation, reward, terminated, truncated and info</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>action</strong> (<em>np.ndarray</em>) – the action to take</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>]</span></p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><ul class="simple">
-<li><p><strong>observation</strong> (<em>np.ndarray or OrderedDict</em>) – observation</p></li>
-<li><p><strong>reward</strong> (<em>float</em>) – reward</p></li>
-<li><p><strong>terminated</strong> (<em>bool</em>) – whether the episode terminated</p></li>
-<li><p><strong>truncated</strong> (<em>bool</em>) – whether the episode was truncated</p></li>
-<li><p><strong>info</strong> (<em>Dict</em>) – info dictionary</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv.render">
-<span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv.render"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv.render" title="Permalink to this definition"></a></dt>
-<dd><p>Renders the environment</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>None</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.base_env.BaseEnv.ordinal">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ordinal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/base_env.html#BaseEnv.ordinal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.base_env.BaseEnv.ordinal" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the ordinal of a number</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>num</strong> (<em>int</em>) – the number to get the ordinal of</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>the ordinal of the number</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-</section>
-<section id="module-voxelgym2D.envs.env_one_step">
-<span id="voxelgym2d-envs-env-one-step-module"></span><h2>voxelgym2D.envs.env_one_step module<a class="headerlink" href="#module-voxelgym2D.envs.env_one_step" title="Permalink to this heading"></a></h2>
-<p>Voxel environment corresponding to Onestep action space</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">voxelgym2D.envs.env_one_step.</span></span><span class="sig-name descname"><span class="pre">VoxelGymOneStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">render_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'600x600.npy'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">21</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">42</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_collisions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partial_reward</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inference_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discrete_actions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ERROR'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/env_one_step.html#VoxelGymOneStep"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#voxelgym2D.envs.base_env.BaseEnv" title="voxelgym2D.envs.base_env.BaseEnv"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEnv</span></code></a></p>
-<p>Voxel environment corresponding to Onestep action space</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">render_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'600x600.npy'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">21</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">42</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_collisions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partial_reward</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inference_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discrete_actions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ERROR'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/env_one_step.html#VoxelGymOneStep.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.__init__" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>render_mode</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – render mode, by default None</p></li>
-<li><p><strong>mapfile</strong> (<em>str</em>) – name of the map file in the maps folder</p></li>
-<li><p><strong>view_size</strong> (<em>int</em>) – size of the view window for observation</p></li>
-<li><p><strong>image_size</strong> (<em>int</em>) – size of the image to be returned as observation</p></li>
-<li><p><strong>max_collisions</strong> (<em>int</em>) – maximum number of collisions allowed before episode ends</p></li>
-<li><p><strong>max_steps</strong> (<em>int</em>) – maximum number of steps allowed before episode ends</p></li>
-<li><p><strong>show_path</strong> (<em>bool</em>) – whether to show the last travesed action path in the observation</p></li>
-<li><p><strong>multi_output</strong> (<em>bool</em>) – whether to add additional outputs in the observation</p></li>
-<li><p><strong>partial_reward</strong> (<em>bool</em>) – whether to give rewards for each step</p></li>
-<li><p><strong>inference_mode</strong> (<em>bool</em>) – whether to run in inference mode</p></li>
-<li><p><strong>discrete_actions</strong> (<em>bool</em>) – whether to use discrete actions</p></li>
-<li><p><strong>log_level</strong> (<em>str</em><em>, </em><em>optional</em>) – log level, by default “ERROR”. One of “DEBUG”, “INFO”, “WARNING”, “ERROR”, “CRITICAL”</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.action_space">
-<span class="sig-name descname"><span class="pre">action_space</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">spaces.Space[ActType]</span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.action_space" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._compute_reward">
-<span class="sig-name descname"><span class="pre">_compute_reward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">completion_reward</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/env_one_step.html#VoxelGymOneStep._compute_reward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._compute_reward" title="Permalink to this definition"></a></dt>
-<dd><p>Computes the reward for the current step</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>completion_reward</strong> (<em>bool</em>) – if True, returns the terminal reward for reaching the target,
-else returns the reward for the current step</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>reward</strong> – reward for the current step</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.action_to_bins">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">action_to_bins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/env_one_step.html#VoxelGymOneStep.action_to_bins"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.action_to_bins" title="Permalink to this definition"></a></dt>
-<dd><p>Converts the action to bins of size 1/4 and returns the bin number in the range [0, 7] for actions</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>action</strong> (<em>np.ndarray</em>) – action to be converted to bin number</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>bin</strong> – bin number in the range [0, 7]</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._create_base_obs">
-<span class="sig-name descname"><span class="pre">_create_base_obs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._create_base_obs" title="Permalink to this definition"></a></dt>
-<dd><p>Creates the base observation for the episode which can be reused throughout the episode</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._find_target">
-<span class="sig-name descname"><span class="pre">_find_target</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._find_target" title="Permalink to this definition"></a></dt>
-<dd><p>Finds a target location for the agent to move to</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>target_location</strong> – target location</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>np.ndarray</p>
-</dd>
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError</strong> – If a target location cannot be found</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._get_info">
-<span class="sig-name descname"><span class="pre">_get_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._get_info" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the info dictionary for the current step of the episode</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>info</strong> – info dictionary</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>Dict</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._get_new_index_from_counts">
-<span class="sig-name descname"><span class="pre">_get_new_index_from_counts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">counts_mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._get_new_index_from_counts" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a new index sampled from the counts matrix</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>counts_mat</strong> (<em>np.ndarray</em>) – counts matrix from which is used to sample the new index</p></li>
-<li><p><strong>alpha_p</strong> (<em>float</em>) – parameter to control the sampling probability</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>sampled_index</strong> – sampled index from the counts matrix in the form (y, x)</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Tuple[int, int]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._get_obs">
-<span class="sig-name descname"><span class="pre">_get_obs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._get_obs" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the observation for the current step of the episode</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>obs</strong> – observation for the current step of the episode</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>Union[np.ndarray, OrderedDict]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._is_protocol">
-<span class="sig-name descname"><span class="pre">_is_protocol</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._is_protocol" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._make_astar_matrix">
-<span class="sig-name descname"><span class="pre">_make_astar_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._make_astar_matrix" title="Permalink to this definition"></a></dt>
-<dd><p>Creates the astar matrix for the current world map and sets the astar grid</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._np_random">
-<span class="sig-name descname"><span class="pre">_np_random</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">np.random.Generator</span> <span class="pre">|</span> <span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._np_random" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._run_astar">
-<span class="sig-name descname"><span class="pre">_run_astar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._run_astar" title="Permalink to this definition"></a></dt>
-<dd><p>Runs the A* algorithm on the current world map and returns the path,
-path cost and number of nodes visited</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>target</strong> (<em>np.ndarray</em>) – target location</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</span></p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><ul class="simple">
-<li><p><strong>path</strong> (<em>List[Tuple[int, int]]</em>) – path from agent to target</p></li>
-<li><p><strong>path_cost</strong> (<em>float</em>) – cost of the path</p></li>
-<li><p><strong>runs</strong> (<em>int</em>) – number of nodes visited</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._slice_grid_map">
-<span class="sig-name descname"><span class="pre">_slice_grid_map</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._slice_grid_map" title="Permalink to this definition"></a></dt>
-<dd><p>Slices the grid map into a 2D numpy array of size (2*view_size, 2*view_size)
-Generate a mapping from the sliced grid map to the original grid map</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]]</span></p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>mapping</strong> (<em>Callable(int, int)</em>) – mapping from the sliced grid map to the original grid map</p></li>
-<li><p><strong>potential_start_location</strong> (<em>Union[np.ndarray, None]</em>) – potential start location for the agent</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._soft_reset">
-<span class="sig-name descname"><span class="pre">_soft_reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._soft_reset" title="Permalink to this definition"></a></dt>
-<dd><p>Moves the agent to the center of the map and resets the target</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._start_end_counts">
-<span class="sig-name descname"><span class="pre">_start_end_counts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._start_end_counts" title="Permalink to this definition"></a></dt>
-<dd><p>Create arrays to keep track of the start and end cell counts</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</span></p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>start_counts</strong> (<em>np.ndarray</em>) – shape like self.grid_map with the count of start cells</p></li>
-<li><p><strong>end_counts</strong> (<em>np.ndarray</em>) – shape like self.grid_map with the count of end cells</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._take_action">
-<span class="sig-name descname"><span class="pre">_take_action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/voxelgym2D/envs/env_one_step.html#VoxelGymOneStep._take_action"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._take_action" title="Permalink to this definition"></a></dt>
-<dd><p>Takes the action and updates the agent location</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>action</strong> (<em>np.ndarray</em>) – action to be taken</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]</span></p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><ul class="simple">
-<li><p><strong>new_agent_location</strong> (<em>List</em>) – new agent location along with the path taken</p></li>
-<li><p><strong>collision</strong> (<em>bool</em>) – True if the agent collides with an obstacle, else False</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.close">
-<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.close" title="Permalink to this definition"></a></dt>
-<dd><p>Closes all open matplotlib figures</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.find_obstacle_neighbor_count">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_obstacle_neighbor_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid_map</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.find_obstacle_neighbor_count" title="Permalink to this definition"></a></dt>
-<dd><p>Finds the number of neighboring obstacles for each cell in the grid map</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>grid_map</strong> (<em>np.ndarray</em>) – grid map with obstacles marked as 1s and free cells marked as 0s</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>neighbors</strong> – number of neighboring obstacles for each cell in the grid map</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>np.ndarray</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.get_logger">
-<span class="sig-name descname"><span class="pre">get_logger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.get_logger" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the logger</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>logger</strong> – logger object</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>Logger</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.get_wrapper_attr">
-<span class="sig-name descname"><span class="pre">get_wrapper_attr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.get_wrapper_attr" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the attribute <cite>name</cite> from the environment.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></span></p>
-</dd>
-<dt class="field-even">Parameters<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>name</strong> (<em>str</em>) – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.metadata">
-<span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">,</span> <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code><span class="pre">]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'render_fps':</span> <span class="pre">1,</span> <span class="pre">'render_modes':</span> <span class="pre">['None']}</span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.metadata" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.np_random">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">np_random</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Generator</span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.np_random" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the environment’s internal <a class="reference internal" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._np_random" title="voxelgym2D.envs.env_one_step.VoxelGymOneStep._np_random"><code class="xref py py-attr docutils literal notranslate"><span class="pre">_np_random</span></code></a> that if not set will initialise with a random seed.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Instances of <cite>np.random.Generator</cite></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.ordinal">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ordinal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.ordinal" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the ordinal of a number</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>num</strong> (<em>int</em>) – the number to get the ordinal of</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>the ordinal of the number</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.render">
-<span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.render" title="Permalink to this definition"></a></dt>
-<dd><p>Renders the environment</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>None</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.render_mode">
-<span class="sig-name descname"><span class="pre">render_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.render_mode" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.reset">
-<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.reset" title="Permalink to this definition"></a></dt>
-<dd><p>Resets the environment to the initial state and returns the initial observation and info</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>seed</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>None</em><em>]</em>) – seed to use for the environment</p></li>
-<li><p><strong>options</strong> (<em>Union</em><em>[</em><em>Dict</em><em>, </em><em>None</em><em>]</em>) – options to use for the environment</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>]</span></p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><ul class="simple">
-<li><p><strong>obs</strong> (<em>np.ndarray or OrderedDict</em>) – observation from manystep environment</p></li>
-<li><p><strong>info</strong> (<em>Dict</em>) – info dictionary of the last step in the stack</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.reward_range">
-<span class="sig-name descname"><span class="pre">reward_range</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(-inf,</span> <span class="pre">inf)</span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.reward_range" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.spec">
-<span class="sig-name descname"><span class="pre">spec</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">EnvSpec</span> <span class="pre">|</span> <span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.spec" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.step">
-<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.step" title="Permalink to this definition"></a></dt>
-<dd><p>Takes a step in the environment and returns the observation, reward, terminated, truncated and info</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>action</strong> (<em>np.ndarray</em>) – the action to take</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">OrderedDict</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>]</span></p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><ul class="simple">
-<li><p><strong>observation</strong> (<em>np.ndarray or OrderedDict</em>) – observation</p></li>
-<li><p><strong>reward</strong> (<em>float</em>) – reward</p></li>
-<li><p><strong>terminated</strong> (<em>bool</em>) – whether the episode terminated</p></li>
-<li><p><strong>truncated</strong> (<em>bool</em>) – whether the episode was truncated</p></li>
-<li><p><strong>info</strong> (<em>Dict</em>) – info dictionary</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.unwrapped">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unwrapped</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Env</span><span class="p"><span class="pre">[</span></span><span class="pre">ObsType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ActType</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.unwrapped" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the base non-wrapped environment.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The base non-wrapped <code class="xref py py-class docutils literal notranslate"><span class="pre">gymnasium.Env</span></code> instance</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>Env</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._new_world_center">
-<span class="sig-name descname"><span class="pre">_new_world_center</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">np.ndarray</span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._new_world_center" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._next_new_world_center">
-<span class="sig-name descname"><span class="pre">_next_new_world_center</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">np.ndarray</span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._next_new_world_center" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._agent_location">
-<span class="sig-name descname"><span class="pre">_agent_location</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">np.ndarray</span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._agent_location" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._target_location">
-<span class="sig-name descname"><span class="pre">_target_location</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">np.ndarray</span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._target_location" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep._path">
-<span class="sig-name descname"><span class="pre">_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep._path" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.ini_astarPath">
-<span class="sig-name descname"><span class="pre">ini_astarPath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.ini_astarPath" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.astarPath">
-<span class="sig-name descname"><span class="pre">astarPath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.astarPath" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.random_gen">
-<span class="sig-name descname"><span class="pre">random_gen</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">np.random.Generator</span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.random_gen" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="voxelgym2D.envs.env_one_step.VoxelGymOneStep.observation_space">
-<span class="sig-name descname"><span class="pre">observation_space</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">spaces.Space[ObsType]</span></em><a class="headerlink" href="#voxelgym2D.envs.env_one_step.VoxelGymOneStep.observation_space" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
 </section>
 </section>
 
@@ -1210,12 +228,13 @@ Generate a mapping from the sliced grid map to the original grid map</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="voxelgym2D.html" class="btn btn-neutral float-left" title="voxelgym2D package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="voxelgym2D.envs.base_env.html" class="btn btn-neutral float-right" title="voxelgym2D.envs.base_env module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, Harisankar Babu.</p>
+    <p>&#169; Copyright 2024, Harisankar Babu.</p>
   </div>
 
    
