@@ -100,6 +100,11 @@ The documentation can be found [here](https://harisankar95.github.io/voxelgym2D/
 - Migration to gymnasium
 - Agent can now be reset to multiple start positions
 
+### 0.3.1
+
+- License updated
+- Documentation updated
+
 ## TODO
 
 - [x] Add 2D environments

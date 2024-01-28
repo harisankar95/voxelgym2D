@@ -1,4 +1,5 @@
 """An example of training PPO in Voxel Gym 2D."""
+
 import os
 from typing import Callable
 
