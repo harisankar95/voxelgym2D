@@ -52,12 +52,11 @@ setup(
         "docs": [
             "sphinx",
             "sphinx_rtd_theme",
-            "recommonmark",
+            "myst-parser",
             "sphinx-autodoc-typehints",
             "sphinx-copybutton",
             "sphinx-prompt",
             "sphinx-notfound-page",
-            "sphinx-autodoc-annotation",
         ],
     },
     python_requires=">=3.8",
