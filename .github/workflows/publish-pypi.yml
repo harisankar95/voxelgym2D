@@ -21,15 +21,6 @@ jobs:
         pip install setuptools wheel twine
         pip install -e .[docs]
 
-    - name: Build and publish to PyPI
-      env:
-        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
-        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-      run: |
-        python setup.py sdist bdist_wheel
-        twine check dist/*
-        twine upload dist/*
-
     - name: Build docs
       run: sphinx-build -b html docs/ ./public
 
@@ -38,3 +29,12 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
+
+    - name: Build and publish to PyPI
+      env:
+        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
+        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+      run: |
+        python setup.py sdist bdist_wheel
+        twine check dist/*
+        twine upload dist/*
