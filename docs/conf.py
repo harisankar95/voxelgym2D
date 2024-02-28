@@ -38,6 +38,7 @@ extensions = [
     "sphinx.ext.inheritance_diagram",  # for inheritance diagrams
     "sphinx.ext.graphviz",  # for graphviz
     "sphinx.ext.mathjax",  # for math
+    "sphinx.ext.intersphinx",  # for intersphinx
     "sphinx_autodoc_typehints",  # for type hints
     "sphinx_copybutton",  # for copy button
     "sphinx-prompt",  # for prompt
@@ -73,6 +74,15 @@ master_doc = "index"
 language = "en"
 
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "**.ipynb_checkpoints"]
+
+# Intersphinx configuration
+intersphinx_mapping = {
+    "python": ("https://docs.python.org/3", None),
+    "numpy": ("https://numpy.org/doc/stable/", None),
+    "matplotlib": ("https://matplotlib.org/stable", None),
+    "gymnasium": ("https://gymnasium.farama.org/", None),
+    "scikit-image": ("https://scikit-image.org/docs/stable/", None),
+}
 
 
 # -- Options for HTML output -------------------------------------------------
