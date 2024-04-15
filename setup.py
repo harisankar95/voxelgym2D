@@ -32,7 +32,7 @@ setup(
     install_requires=[
         "gymnasium<=0.29.1",
         "numpy",
-        "scikit-image<=0.22.0",
+        "scikit-image<=0.23.1",
         "opencv-python",
         "pathfinding>=1.0.9",
         # rendering
